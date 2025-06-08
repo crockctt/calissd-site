@@ -7,10 +7,6 @@ export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
   const [showContact, setShowContact] = useState(false);
 
-  const scrollToSurvey = () => {
-    surveyRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="min-h-screen bg-[#F6F3EE] flex flex-col relative font-sans">
       {/* Tally Popup Script */}
@@ -32,7 +28,7 @@ export default function Home() {
           {/* Tagline */}
           <div className="flex-1 flex flex-col items-center md:items-center text-center">
             <span className="text-xl sm:text-2xl font-semibold text-[#15304B] tracking-tight" style={{ letterSpacing: '-0.01em' }}>
-              California's Trusted Disability Law Connection
+              California&apos;s Trusted Disability Law Connection
             </span>
           </div>
           {/* Call Now + Badge */}
