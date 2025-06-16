@@ -60,12 +60,13 @@ export default function Home() {
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
         <div className="flex flex-col md:flex-row gap-8">
           <div className="icon-card flex-1">
+            {/* Modern message icon */}
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
-              <path d="M13 25v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H17l-4 3v-3a2 2 0 0 1-2-2z" stroke="#15304B" strokeWidth="2" fill="#fff" />
-              <circle cx="17" cy="21" r="1" fill="#F7B32B" />
-              <circle cx="20" cy="21" r="1" fill="#F7B32B" />
-              <circle cx="23" cy="21" r="1" fill="#F7B32B" />
+              <path d="M12 26v-8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H16l-4 3v-3a4 4 0 0 1-4-4z" fill="#fff" stroke="#15304B" strokeWidth="2" strokeLinejoin="round" />
+              <circle cx="16" cy="22" r="1.2" fill="#F7B32B" />
+              <circle cx="20" cy="22" r="1.2" fill="#F7B32B" />
+              <circle cx="24" cy="22" r="1.2" fill="#F7B32B" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
             <p className="body-sans text-base text-[#15304B]">Start with a free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
@@ -117,7 +118,6 @@ export default function Home() {
               <span className="text-lg text-[#15304B] font-medium">Avg. Response Time</span>
             </div>
           </div>
-          <h4 className="heading-display text-2xl font-bold text-[#15304B] mt-10 text-center">Our Impact</h4>
         </div>
       </section>
       {/* Survey Section Anchor */}
