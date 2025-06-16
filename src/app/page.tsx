@@ -60,13 +60,14 @@ export default function Home() {
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
         <div className="flex flex-col md:flex-row gap-8">
           <div className="icon-card flex-1">
-            {/* Modern message icon */}
+            {/* Modern phone icon */}
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
-              <path d="M12 26v-8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H16l-4 3v-3a4 4 0 0 1-4-4z" fill="#fff" stroke="#15304B" strokeWidth="2" strokeLinejoin="round" />
-              <circle cx="16" cy="22" r="1.2" fill="#F7B32B" />
-              <circle cx="20" cy="22" r="1.2" fill="#F7B32B" />
-              <circle cx="24" cy="22" r="1.2" fill="#F7B32B" />
+              <rect x="13" y="12" width="14" height="16" rx="3" fill="#fff" stroke="#15304B" strokeWidth="2" />
+              <rect x="17" y="15" width="6" height="1.5" rx="0.75" fill="#F7B32B" />
+              <rect x="17" y="18" width="6" height="1.5" rx="0.75" fill="#F7B32B" />
+              <rect x="17" y="21" width="6" height="1.5" rx="0.75" fill="#F7B32B" />
+              <circle cx="20" cy="26" r="1" fill="#F7B32B" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
             <p className="body-sans text-base text-[#15304B]">Start with a free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
