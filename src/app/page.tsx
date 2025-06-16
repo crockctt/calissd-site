@@ -34,7 +34,6 @@ export default function Home() {
           Call Now: 651-964-8710
         </a>
       </nav>
-      <hr className="gold-divider" />
       {/* Hero Section */}
       <section className="hero-bg section pt-20 pb-16 border-b-0">
         <h1 className="heading-display text-5xl sm:text-6xl font-extrabold mb-6 text-[#15304B] leading-tight">
@@ -56,7 +55,6 @@ export default function Home() {
           Start Free Consultation
         </button>
       </section>
-      <hr className="gold-divider" />
       {/* How It Works Section */}
       <section className="section pt-8 pb-8">
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
@@ -93,9 +91,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <hr className="gold-divider" />
       {/* Stats/Trust Section */}
-      <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]">
+      <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]" style={{ borderTop: '3px solid #F7B32B' }}>
         <div className="max-w-none w-full px-0">
           <h3 className="heading-display text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-12 pl-8">We Will Connect You</h3>
           <div className="flex flex-col md:flex-row justify-between items-stretch w-full gap-0">
