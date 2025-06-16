@@ -16,12 +16,12 @@ export default function Home() {
           <Image
             src="/Calissdlogo.PNG"
             alt="CaliSSD Logo"
-            width={60}
-            height={60}
-            className="rounded-md"
+            width={90}
+            height={90}
+            className="rounded-md self-start"
             priority
           />
-          <div className="flex flex-col ml-2">
+          <div className="flex flex-col ml-4 justify-center h-[90px]">
             <span className="heading-display text-3xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
               California Social
             </span>
