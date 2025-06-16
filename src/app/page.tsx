@@ -121,12 +121,18 @@ export default function Home() {
             <p className="body-sans text-base text-[#15304B]">We connect you only with people who are actively seeking help with their disability claim—no cold calls, no recycled leads.</p>
           </div>
           <div className="icon-card flex-1">
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="7" y="7" width="26" height="26" rx="6" stroke="#F7B32B" strokeWidth="3"/><path d="M13 20h14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
+              <path d="M18 10l-4 10h6l-2 10 8-12h-6l2-8z" fill="#15304B"/>
+            </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Real-Time Connection</h3>
             <p className="body-sans text-base text-[#15304B]">Your information is delivered instantly to a qualified attorney, so you get help fast—often within hours.</p>
           </div>
           <div className="icon-card flex-1">
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/><path d="M20 13v7l5 3" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
+              <path d="M20 12v12M14 24c0 2 2 4 6 4s6-2 6-4M14 24h12M16 24c0 1.1-1.34 2-3 2s-3-.9-3-2M34 24c0 1.1-1.34 2-3 2s-3-.9-3-2" stroke="#15304B" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Expert Legal Guidance</h3>
             <p className="body-sans text-base text-[#15304B]">Get matched with experienced Social Security Disability attorneys who know how to win your case.</p>
           </div>
