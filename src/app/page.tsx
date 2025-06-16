@@ -43,15 +43,15 @@ export default function Home() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="section pt-20 pb-12 border-b-0">
-        <h2 className="heading-serif text-5xl sm:text-6xl font-extrabold mb-8 text-[#15304B] leading-tight">
-          Need Help With Your Social Security Disability Claim?
-        </h2>
-        <p className="body-sans text-2xl mb-12 text-[#15304B] font-medium max-w-2xl">
+      <section className="hero-bg section pt-24 pb-16 border-b-0">
+        <h1 className="heading-display text-5xl sm:text-6xl font-extrabold mb-6 text-[#15304B] leading-tight">
+          California Social Security Disability
+        </h1>
+        <p className="body-sans text-2xl mb-10 text-[#15304B] font-medium max-w-2xl">
           Get a free, no-obligation consultation with a top disability attorney.<br className="hidden md:block" />
           We connect you with experienced lawyers who can help you get the benefits you deserve.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mb-2">
           <button
             className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
             data-tally-open="mZg1Oe"
@@ -74,7 +74,7 @@ export default function Home() {
         <div className={`transition-all duration-300 overflow-hidden ${showContact ? 'max-h-[1000px] mt-8' : 'max-h-0 mt-0'}`}>
           {showContact && (
             <div className="card w-full max-w-lg mt-2 border-l-8 border-[#F7B32B]">
-              <h3 className="heading-serif text-2xl font-extrabold mb-6 text-[#15304B] pl-2" style={{ borderLeft: '6px solid #F7B32B' }}>
+              <h3 className="heading-display text-2xl font-extrabold mb-6 text-[#15304B] pl-2" style={{ borderLeft: '6px solid #F7B32B' }}>
                 Contact Us
               </h3>
               <form className="flex flex-col gap-4 body-sans">
@@ -111,9 +111,31 @@ export default function Home() {
         </div>
       </section>
       <hr className="gold-divider" />
+      {/* How It Works Section */}
+      <section className="section pt-8 pb-8">
+        <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="icon-card flex-1">
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/><path d="M13 20h14M20 13v14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Exclusive, Pre-Qualified Leads</h3>
+            <p className="body-sans text-base text-[#15304B]">We connect you only with people who are actively seeking help with their disability claim—no cold calls, no recycled leads.</p>
+          </div>
+          <div className="icon-card flex-1">
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="7" y="7" width="26" height="26" rx="6" stroke="#F7B32B" strokeWidth="3"/><path d="M13 20h14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Real-Time Connection</h3>
+            <p className="body-sans text-base text-[#15304B]">Your information is delivered instantly to a qualified attorney, so you get help fast—often within hours.</p>
+          </div>
+          <div className="icon-card flex-1">
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/><path d="M20 13v7l5 3" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Expert Legal Guidance</h3>
+            <p className="body-sans text-base text-[#15304B]">Get matched with experienced Social Security Disability attorneys who know how to win your case.</p>
+          </div>
+        </div>
+      </section>
+      <hr className="gold-divider" />
       {/* Stats/Trust Section */}
       <section className="section py-16 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]">
-        <h3 className="heading-serif text-4xl font-extrabold text-[#15304B] mb-12">We Will Connect You</h3>
+        <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-12">We Will Connect You</h3>
         <div className="w-full bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-center divide-y md:divide-y-0 md:divide-x divide-[#F7B32B] overflow-hidden">
           {/* Stat 1 */}
           <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2">
@@ -138,7 +160,7 @@ export default function Home() {
       <hr className="gold-divider" />
       {/* Testimonials Section */}
       <section className="section py-20 bg-[#F6F3EE]">
-        <h3 className="heading-serif text-3xl font-extrabold text-[#15304B] mb-10">What Our Clients Say</h3>
+        <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">What Our Clients Say</h3>
         <div className="flex flex-col md:flex-row gap-8 justify-start items-stretch">
           {/* Testimonial Card 1 */}
           <div className="card flex-1 border-l-4 border-[#F7B32B]">

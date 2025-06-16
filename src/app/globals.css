@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
   --background: #ffffff;
@@ -46,8 +46,8 @@ body::before {
   z-index: 0;
 }
 
-.heading-serif {
-  font-family: 'Merriweather', serif;
+.heading-display {
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -57,7 +57,7 @@ body::before {
 }
 
 .section {
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
@@ -74,6 +74,29 @@ body::before {
   padding: 2.5rem;
   margin-bottom: 2rem;
   text-align: left;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 12px 48px 0 rgba(21,48,75,0.16);
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(21,48,75,0.08);
+  padding: 2rem 2rem 2rem 2rem;
+  min-width: 260px;
+  min-height: 220px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #F7B32B;
+  transition: box-shadow 0.2s;
+}
+.icon-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(21,48,75,0.13);
 }
 
 .gold-divider {
@@ -82,10 +105,52 @@ body::before {
   margin: 3rem 0;
 }
 
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #F6F3EE;
+  border-bottom: 2px solid #F7B32B;
+  box-shadow: 0 2px 12px 0 rgba(21,48,75,0.04);
+}
+
+.hero-bg {
+  background: linear-gradient(120deg, #fffbe8 0%, #f6f3ee 100%);
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow: 0 8px 40px 0 rgba(21,48,75,0.06);
+}
+
 button, .button {
   transition: box-shadow 0.2s, background 0.2s;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
 }
 button:hover, .button:hover {
   box-shadow: 0 4px 24px 0 rgba(21,48,75,0.15);
   background: #e6a821;
+}
+
+.footer {
+  background: #F6F3EE;
+  color: #15304B;
+  font-size: 1rem;
+  padding: 2rem 0 1rem 0;
+  text-align: left;
+  border-top: 2px solid #F7B32B;
+  margin-top: 3rem;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .card, .icon-card {
+    padding: 1.25rem;
+  }
+  .footer {
+    font-size: 0.95rem;
+    padding: 1.5rem 0 0.5rem 0;
+  }
 }
