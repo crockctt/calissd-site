@@ -1,11 +1,10 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Script from "next/script";
 
 export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
-  const [showContact, setShowContact] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#F6F3EE] flex flex-col relative font-sans">
@@ -54,44 +53,6 @@ export default function Home() {
         >
           Start Free Consultation
         </button>
-        <div className={`transition-all duration-300 overflow-hidden ${showContact ? 'max-h-[1000px] mt-8' : 'max-h-0 mt-0'}`}>
-          {showContact && (
-            <div className="card w-full max-w-lg mt-2 border-l-8 border-[#F7B32B]">
-              <h3 className="heading-display text-2xl font-extrabold mb-6 text-[#15304B] pl-2" style={{ borderLeft: '6px solid #F7B32B' }}>
-                Contact Us
-              </h3>
-              <form className="flex flex-col gap-4 body-sans">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg"
-                  required
-                />
-                <input
-                  type="text"
-                  name="message"
-                  placeholder="How can we help you?"
-                  className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          )}
-        </div>
       </section>
       <hr className="gold-divider" />
       {/* How It Works Section */}
@@ -120,7 +81,7 @@ export default function Home() {
               <path d="M20 12v12M14 24c0 2 2 4 6 4s6-2 6-4M14 24h12M16 24c0 1.1-1.34 2-3 2s-3-.9-3-2M34 24c0 1.1-1.34 2-3 2s-3-.9-3-2" stroke="#15304B" strokeWidth="2" strokeLinecap="round"/>
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get the Benefits You Deserve</h3>
-            <p className="body-sans text-base text-[#15304B]">Your attorney will guide you through the process and fight for the benefits you're entitled to.</p>
+            <p className="body-sans text-base text-[#15304B]">Your attorney will guide you through the process and fight for the benefits you&apos;re entitled to.</p>
           </div>
         </div>
       </section>
