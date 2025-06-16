@@ -52,7 +52,7 @@ export default function Home() {
           data-tally-overlay="rgba(21,48,75,0.7)"
           style={{ cursor: 'pointer' }}
         >
-          Start Free Consultation
+          Get Your Free Consultation
         </button>
       </section>
       {/* How It Works Section */}
@@ -70,7 +70,7 @@ export default function Home() {
               <circle cx="20" cy="26" r="1" fill="#F7B32B" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
-            <p className="body-sans text-base text-[#15304B]">Start with a free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
+            <p className="body-sans text-base text-[#15304B]">Get your free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
