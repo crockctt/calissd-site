@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap');
 
 :root {
   --background: #ffffff;
@@ -21,6 +22,7 @@
 
 body {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-size: 18px;
   background: #F6F3EE;
   color: #15304B;
   margin: 0;
@@ -42,4 +44,48 @@ body::before {
   opacity: 0.07;
   background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="39" height="39" rx="7.5" fill="white" stroke="%23F7B32B"/></svg>');
   z-index: 0;
+}
+
+.heading-serif {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.body-sans {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+}
+
+.section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: left;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 40px 0 rgba(21,48,75,0.10);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.gold-divider {
+  border: none;
+  border-top: 2px solid #F7B32B;
+  margin: 3rem 0;
+}
+
+button, .button {
+  transition: box-shadow 0.2s, background 0.2s;
+}
+button:hover, .button:hover {
+  box-shadow: 0 4px 24px 0 rgba(21,48,75,0.15);
+  background: #e6a821;
 }
