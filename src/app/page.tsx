@@ -134,26 +134,26 @@ export default function Home() {
       </section>
       <hr className="gold-divider" />
       {/* Stats/Trust Section */}
-      <section className="section py-16 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]">
-        <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-12">We Will Connect You</h3>
-        <div className="w-full bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-center divide-y md:divide-y-0 md:divide-x divide-[#F7B32B] overflow-hidden">
-          {/* Stat 1 */}
-          <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#F7B32B" strokeWidth="2">
-              <path d="M6 18l6 6c1.5 1.5 4 1.5 5.5 0l8-8c1.5-1.5 1.5-4 0-5.5l-2-2c-1.5-1.5-4-1.5-5.5 0l-1 1" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M18 14l-6-6c-1.5-1.5-4-1.5-5.5 0l-2 2c-1.5 1.5-1.5 4 0 5.5l8 8c1.5 1.5 4 1.5 5.5 0l1-1" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span className="text-4xl font-extrabold text-[#F7B32B]">100+</span>
-            <span className="text-lg text-[#15304B] font-medium">People Helped</span>
-          </div>
-          {/* Stat 2 */}
-          <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#15304B" strokeWidth="2">
-              <circle cx="16" cy="16" r="12" stroke="#15304B" strokeWidth="2"/>
-              <path d="M16 10v6l4 2" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span className="text-4xl font-extrabold text-[#15304B]">11h</span>
-            <span className="text-lg text-[#15304B] font-medium">Avg. Response Time</span>
+      <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]">
+        <div className="max-w-none w-full px-0">
+          <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-12 pl-8">We Will Connect You</h3>
+          <div className="flex flex-col md:flex-row justify-between items-stretch w-full gap-0">
+            <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2 border-r-2 border-[#F7B32B]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#F7B32B" strokeWidth="2">
+                <path d="M6 18l6 6c1.5 1.5 4 1.5 5.5 0l8-8c1.5-1.5 1.5-4 0-5.5l-2-2c-1.5-1.5-4-1.5-5.5 0l-1 1" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M18 14l-6-6c-1.5-1.5-4-1.5-5.5 0l-2 2c-1.5 1.5-1.5 4 0 5.5l8 8c1.5 1.5 4 1.5 5.5 0l1-1" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-4xl font-extrabold text-[#F7B32B]">100+</span>
+              <span className="text-lg text-[#15304B] font-medium">People Helped</span>
+            </div>
+            <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#15304B" strokeWidth="2">
+                <circle cx="16" cy="16" r="12" stroke="#15304B" strokeWidth="2"/>
+                <path d="M16 10v6l4 2" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-4xl font-extrabold text-[#15304B]">11h</span>
+              <span className="text-lg text-[#15304B] font-medium">Avg. Response Time</span>
+            </div>
           </div>
         </div>
       </section>
