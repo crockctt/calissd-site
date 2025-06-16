@@ -93,19 +93,23 @@ export default function Home() {
       </section>
       {/* Stats/Trust Section */}
       <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]" style={{ borderTop: '3px solid #F7B32B' }}>
-        <div className="max-w-none w-full px-0">
-          <h3 className="heading-display text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-12 pl-8">We Will Connect You</h3>
-          <div className="flex flex-col md:flex-row justify-between items-stretch w-full gap-0">
-            <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2 border-r-2 border-[#F7B32B]">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#F7B32B" strokeWidth="2">
-                <path d="M6 18l6 6c1.5 1.5 4 1.5 5.5 0l8-8c1.5-1.5 1.5-4 0-5.5l-2-2c-1.5-1.5-4-1.5-5.5 0l-1 1" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M18 14l-6-6c-1.5-1.5-4-1.5-5.5 0l-2 2c-1.5 1.5-1.5 4 0 5.5l8 8c1.5 1.5 4 1.5 5.5 0l1-1" strokeLinecap="round" strokeLinejoin="round"/>
+        <div className="max-w-3xl mx-auto px-4">
+          <h3 className="heading-display text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-6 text-center">We Will Connect You</h3>
+          <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row justify-center items-center gap-10 py-12 px-6 md:px-12">
+            <div className="flex flex-col items-center flex-1 border-b-2 md:border-b-0 md:border-r-2 border-[#F7B32B] pb-8 md:pb-0 md:pr-10">
+              {/* Group/People Icon */}
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48" className="mb-3">
+                <circle cx="24" cy="24" r="22" stroke="#F7B32B" strokeWidth="3" />
+                <circle cx="24" cy="20" r="6" stroke="#15304B" strokeWidth="2" fill="#fff" />
+                <ellipse cx="24" cy="33" rx="12" ry="7" stroke="#15304B" strokeWidth="2" fill="#fff" />
+                <circle cx="14" cy="26" r="3" stroke="#15304B" strokeWidth="2" fill="#fff" />
+                <circle cx="34" cy="26" r="3" stroke="#15304B" strokeWidth="2" fill="#fff" />
               </svg>
               <span className="text-4xl font-extrabold text-[#F7B32B]">100+</span>
               <span className="text-lg text-[#15304B] font-medium">People Helped</span>
             </div>
-            <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#15304B" strokeWidth="2">
+            <div className="flex flex-col items-center flex-1 pt-8 md:pt-0 md:pl-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12 mb-3" stroke="#15304B" strokeWidth="2">
                 <circle cx="16" cy="16" r="12" stroke="#15304B" strokeWidth="2"/>
                 <path d="M16 10v6l4 2" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -113,6 +117,7 @@ export default function Home() {
               <span className="text-lg text-[#15304B] font-medium">Avg. Response Time</span>
             </div>
           </div>
+          <h4 className="heading-display text-2xl font-bold text-[#15304B] mt-10 text-center">Our Impact</h4>
         </div>
       </section>
       {/* Survey Section Anchor */}
