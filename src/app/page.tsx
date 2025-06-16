@@ -69,8 +69,8 @@ export default function Home() {
               <rect x="17" y="21" width="6" height="1.5" rx="0.75" fill="#F7B32B" />
               <circle cx="20" cy="26" r="1" fill="#F7B32B" />
             </svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
-            <p className="body-sans text-base text-[#15304B]">Get your free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Fill Out the Form</h3>
+            <p className="body-sans text-base text-[#15304B]">Tell us about your situation by completing a short form with your contact details and disability type.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
@@ -80,16 +80,16 @@ export default function Home() {
               <circle cx="28" cy="28" r="5" fill="#F7B32B" stroke="#15304B" strokeWidth="2" />
               <path d="M26.5 28.5l1.5 1.5 3-3" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Matched with a Disability Attorney</h3>
-            <p className="body-sans text-base text-[#15304B]">We instantly connect you with a qualified attorney who specializes in Social Security Disability cases.</p>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get Matched with an Attorney</h3>
+            <p className="body-sans text-base text-[#15304B]">We connect you with a qualified disability attorney who understands your case.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
               <path d="M14 21l5 5 7-9" stroke="#15304B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
             </svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get the Benefits You Deserve</h3>
-            <p className="body-sans text-base text-[#15304B]">Your attorney will guide you through the process and fight for the benefits you&apos;re entitled to.</p>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get Your Free Consultation</h3>
+            <p className="body-sans text-base text-[#15304B]">The attorney will reach out to offer a free consultation and discuss your legal options.</p>
           </div>
         </div>
       </section>
