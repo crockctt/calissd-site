@@ -53,18 +53,15 @@ body::before {
 }
 
 .body-sans {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', 'Geist', 'Geist Sans', Arial, sans-serif;
+  font-weight: 400;
 }
 
 .section {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: left;
 }
 
 .card {
@@ -81,28 +78,25 @@ body::before {
 }
 
 .icon-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 16px 0 rgba(21,48,75,0.06);
+  padding: 2.5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.25rem;
-  background: #fff;
-  border-radius: 1.25rem;
-  box-shadow: 0 4px 24px 0 rgba(21,48,75,0.08);
-  padding: 2rem 2rem 2rem 2rem;
-  min-width: 260px;
-  min-height: 220px;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid #F7B32B;
+  gap: 1rem;
   transition: box-shadow 0.2s;
 }
 .icon-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(21,48,75,0.13);
+  box-shadow: 0 4px 32px 0 rgba(21,48,75,0.12);
 }
 
 .gold-divider {
   border: none;
-  border-top: 2px solid #F7B32B;
-  margin: 3rem 0;
+  border-top: 3px solid #F7B32B;
+  margin: 0 0 2.5rem 0;
+  width: 100%;
 }
 
 .sticky-nav {
@@ -110,23 +104,20 @@ body::before {
   top: 0;
   z-index: 50;
   background: #F6F3EE;
-  border-bottom: 2px solid #F7B32B;
-  box-shadow: 0 2px 12px 0 rgba(21,48,75,0.04);
+  box-shadow: 0 2px 8px 0 rgba(21,48,75,0.04);
 }
 
 .hero-bg {
-  background: linear-gradient(120deg, #fffbe8 0%, #f6f3ee 100%);
+  background: linear-gradient(90deg, #F6F3EE 0%, #fff 100%);
   border-radius: 0 0 2.5rem 2.5rem;
   box-shadow: 0 8px 40px 0 rgba(21,48,75,0.06);
 }
 
 button, .button {
-  transition: box-shadow 0.2s, background 0.2s;
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
-}
-button:hover, .button:hover {
-  box-shadow: 0 4px 24px 0 rgba(21,48,75,0.15);
-  background: #e6a821;
+  font-family: 'Inter', 'Geist', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, color 0.2s;
 }
 
 .footer {

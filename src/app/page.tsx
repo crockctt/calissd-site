@@ -12,65 +12,48 @@ export default function Home() {
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Top Navigation Bar */}
-      <nav className="w-full flex flex-col border-b-2 border-[#F7B32B] bg-[#F6F3EE] shadow-none z-20 pb-2">
-        <div className="flex flex-col md:flex-row items-center justify-between px-8 pt-6 pb-3 gap-4">
-          {/* Logo */}
-          <div className="flex items-center flex-shrink-0">
-            <Image
-              src="/Calissdlogo.PNG"
-              alt="CaliSSD Logo"
-              width={90}
-              height={90}
-              className="opacity-95 drop-shadow-none rounded-md"
-              priority
-            />
-          </div>
-          {/* Tagline */}
-          <div className="flex-1 flex flex-col items-center md:items-center text-center">
-            <span className="text-2xl sm:text-3xl font-bold text-[#15304B] tracking-wide font-serif" style={{ letterSpacing: '0.01em' }}>
-              California Social Security Disability
-            </span>
-          </div>
-          {/* Call Now + Badge */}
-          <div className="flex flex-col items-center md:items-end gap-2 flex-shrink-0">
-            <a href="tel:6519648710" className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow hover:bg-[#e6a821] transition border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2">
-              Call Now: 651-964-8710
-            </a>
-            <span className="mt-1 inline-block bg-[#15304B] text-white text-xs font-semibold rounded-full px-4 py-1 tracking-wide shadow" style={{ letterSpacing: '0.04em' }}>
-              California Based
-            </span>
-          </div>
+      <nav className="sticky-nav w-full flex items-center justify-between px-10 py-6 bg-[#F6F3EE]">
+        <div className="flex items-center gap-4">
+          <Image
+            src="/Calissdlogo.PNG"
+            alt="CaliSSD Logo"
+            width={60}
+            height={60}
+            className="rounded-md"
+            priority
+          />
+          <span className="heading-display text-2xl sm:text-3xl font-bold text-[#15304B] tracking-tight" style={{ letterSpacing: '-0.01em' }}>
+            CaliSSD
+          </span>
+          <span className="ml-6 text-lg sm:text-xl font-semibold text-[#15304B] tracking-wide" style={{ letterSpacing: '0.01em' }}>
+            California Social Security Disability
+          </span>
         </div>
+        <a href="tel:6519648710" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow hover:bg-[#e6a821] transition border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2">
+          Call Now: 651-964-8710
+        </a>
       </nav>
+      <hr className="gold-divider" />
       {/* Hero Section */}
-      <section className="hero-bg section pt-24 pb-16 border-b-0">
+      <section className="hero-bg section pt-20 pb-16 border-b-0">
         <h1 className="heading-display text-5xl sm:text-6xl font-extrabold mb-6 text-[#15304B] leading-tight">
-          California Social Security Disability
+          Get Help With Your Social Security Disability Claim
         </h1>
         <p className="body-sans text-2xl mb-10 text-[#15304B] font-medium max-w-2xl">
-          Get a free, no-obligation consultation with a top disability attorney.<br className="hidden md:block" />
-          We connect you with experienced lawyers who can help you get the benefits you deserve.
+          Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mb-2">
-          <button
-            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
-            data-tally-open="mZg1Oe"
-            data-tally-layout="modal"
-            data-tally-width="600"
-            data-tally-emoji-text=""
-            data-tally-auto-close="true"
-            data-tally-overlay="rgba(21,48,75,0.7)"
-            style={{ cursor: 'pointer' }}
-          >
-            Start Free Consultation Survey
-          </button>
-          <button
-            onClick={() => setShowContact((v) => !v)}
-            className="button bg-white border-2 border-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl hover:bg-[#F7B32B]/20 outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
-          >
-            {showContact ? "Hide Contact Form" : "Contact Us"}
-          </button>
-        </div>
+        <button
+          className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
+          data-tally-open="mZg1Oe"
+          data-tally-layout="modal"
+          data-tally-width="600"
+          data-tally-emoji-text=""
+          data-tally-auto-close="true"
+          data-tally-overlay="rgba(21,48,75,0.7)"
+          style={{ cursor: 'pointer' }}
+        >
+          Start Free Consultation
+        </button>
         <div className={`transition-all duration-300 overflow-hidden ${showContact ? 'max-h-[1000px] mt-8' : 'max-h-0 mt-0'}`}>
           {showContact && (
             <div className="card w-full max-w-lg mt-2 border-l-8 border-[#F7B32B]">
@@ -116,25 +99,28 @@ export default function Home() {
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
         <div className="flex flex-col md:flex-row gap-8">
           <div className="icon-card flex-1">
-            <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/><path d="M13 20h14M20 13v14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/></svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Exclusive, Pre-Qualified Leads</h3>
-            <p className="body-sans text-base text-[#15304B]">We connect you only with people who are actively seeking help with their disability claim—no cold calls, no recycled leads.</p>
+            <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
+              <path d="M13 20h14M20 13v14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/>
+            </svg>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
+            <p className="body-sans text-base text-[#15304B]">Start with a free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
               <path d="M18 10l-4 10h6l-2 10 8-12h-6l2-8z" fill="#15304B"/>
             </svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Real-Time Connection</h3>
-            <p className="body-sans text-base text-[#15304B]">Your information is delivered instantly to a qualified attorney, so you get help fast—often within hours.</p>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Matched with a Disability Attorney</h3>
+            <p className="body-sans text-base text-[#15304B]">We instantly connect you with a qualified attorney who specializes in Social Security Disability cases.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
               <path d="M20 12v12M14 24c0 2 2 4 6 4s6-2 6-4M14 24h12M16 24c0 1.1-1.34 2-3 2s-3-.9-3-2M34 24c0 1.1-1.34 2-3 2s-3-.9-3-2" stroke="#15304B" strokeWidth="2" strokeLinecap="round"/>
             </svg>
-            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Expert Legal Guidance</h3>
-            <p className="body-sans text-base text-[#15304B]">Get matched with experienced Social Security Disability attorneys who know how to win your case.</p>
+            <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get the Benefits You Deserve</h3>
+            <p className="body-sans text-base text-[#15304B]">Your attorney will guide you through the process and fight for the benefits you're entitled to.</p>
           </div>
         </div>
       </section>
@@ -160,28 +146,6 @@ export default function Home() {
               <span className="text-4xl font-extrabold text-[#15304B]">11h</span>
               <span className="text-lg text-[#15304B] font-medium">Avg. Response Time</span>
             </div>
-          </div>
-        </div>
-      </section>
-      <hr className="gold-divider" />
-      {/* Testimonials Section */}
-      <section className="section py-20 bg-[#F6F3EE]">
-        <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">What Our Clients Say</h3>
-        <div className="flex flex-col md:flex-row gap-8 justify-start items-stretch">
-          {/* Testimonial Card 1 */}
-          <div className="card flex-1 border-l-4 border-[#F7B32B]">
-            <p className="body-sans text-lg text-[#15304B] mb-4">“CaliSSD made the process so easy. I got my benefits faster than I expected!”</p>
-            <span className="font-bold text-[#15304B]">— Jane D.</span>
-          </div>
-          {/* Testimonial Card 2 */}
-          <div className="card flex-1 border-l-4 border-[#F7B32B]">
-            <p className="body-sans text-lg text-[#15304B] mb-4">“The attorney I was matched with was knowledgeable and caring. Highly recommend!”</p>
-            <span className="font-bold text-[#15304B]">— Mark S.</span>
-          </div>
-          {/* Testimonial Card 3 */}
-          <div className="card flex-1 border-l-4 border-[#F7B32B]">
-            <p className="body-sans text-lg text-[#15304B] mb-4">“I was nervous about applying, but CaliSSD supported me every step of the way.”</p>
-            <span className="font-bold text-[#15304B]">— Lisa W.</span>
           </div>
         </div>
       </section>
