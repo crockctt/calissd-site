@@ -27,8 +27,8 @@ export default function Home() {
           </div>
           {/* Tagline */}
           <div className="flex-1 flex flex-col items-center md:items-center text-center">
-            <span className="text-xl sm:text-2xl font-semibold text-[#15304B] tracking-tight" style={{ letterSpacing: '-0.01em' }}>
-              California&apos;s Trusted Disability Law Connection
+            <span className="text-2xl sm:text-3xl font-bold text-[#15304B] tracking-wide font-serif" style={{ letterSpacing: '0.01em' }}>
+              California Social Security Disability
             </span>
           </div>
           {/* Call Now + Badge */}
