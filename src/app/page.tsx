@@ -21,12 +21,14 @@ export default function Home() {
             className="rounded-md"
             priority
           />
-          <span className="heading-display text-2xl sm:text-3xl font-bold text-[#15304B] tracking-tight" style={{ letterSpacing: '-0.01em' }}>
-            CaliSSD
-          </span>
-          <span className="ml-6 text-lg sm:text-xl font-semibold text-[#15304B] tracking-wide" style={{ letterSpacing: '0.01em' }}>
-            California Social Security Disability
-          </span>
+          <div className="flex flex-col ml-2">
+            <span className="heading-display text-3xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+              California Social
+            </span>
+            <span className="heading-display text-3xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+              Security Disability
+            </span>
+          </div>
         </div>
         <a href="tel:6519648710" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow hover:bg-[#e6a821] transition border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2">
           Call Now: 651-964-8710
@@ -61,24 +63,28 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-8">
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
-              <path d="M13 20h14M20 13v14" stroke="#15304B" strokeWidth="3" strokeLinecap="round"/>
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
+              <path d="M13 25v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H17l-4 3v-3a2 2 0 0 1-2-2z" stroke="#15304B" strokeWidth="2" fill="#fff" />
+              <circle cx="17" cy="21" r="1" fill="#F7B32B" />
+              <circle cx="20" cy="21" r="1" fill="#F7B32B" />
+              <circle cx="23" cy="21" r="1" fill="#F7B32B" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Free Consultation</h3>
             <p className="body-sans text-base text-[#15304B]">Start with a free, no-obligation consultation to see if you qualify for Social Security Disability benefits.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
-              <path d="M18 10l-4 10h6l-2 10 8-12h-6l2-8z" fill="#15304B"/>
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
+              <path d="M12 22l4 4c1.5 1.5 4 1.5 5.5 0l6-6c1.5-1.5 1.5-4 0-5.5l-1-1c-1.5-1.5-4-1.5-5.5 0l-1 1" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
+              <path d="M22 18l-4-4c-1.5-1.5-4-1.5-5.5 0l-1 1c-1.5 1.5-1.5 4 0 5.5l6 6c1.5 1.5 4 1.5 5.5 0l1-1" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Matched with a Disability Attorney</h3>
             <p className="body-sans text-base text-[#15304B]">We instantly connect you with a qualified attorney who specializes in Social Security Disability cases.</p>
           </div>
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3"/>
-              <path d="M20 12v12M14 24c0 2 2 4 6 4s6-2 6-4M14 24h12M16 24c0 1.1-1.34 2-3 2s-3-.9-3-2M34 24c0 1.1-1.34 2-3 2s-3-.9-3-2" stroke="#15304B" strokeWidth="2" strokeLinecap="round"/>
+              <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
+              <path d="M14 21l5 5 7-9" stroke="#15304B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get the Benefits You Deserve</h3>
             <p className="body-sans text-base text-[#15304B]">Your attorney will guide you through the process and fight for the benefits you&apos;re entitled to.</p>
