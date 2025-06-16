@@ -75,8 +75,10 @@ export default function Home() {
           <div className="icon-card flex-1">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
-              <path d="M12 22l4 4c1.5 1.5 4 1.5 5.5 0l6-6c1.5-1.5 1.5-4 0-5.5l-1-1c-1.5-1.5-4-1.5-5.5 0l-1 1" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
-              <path d="M22 18l-4-4c-1.5-1.5-4-1.5-5.5 0l-1 1c-1.5 1.5-1.5 4 0 5.5l6 6c1.5 1.5 4 1.5 5.5 0l1-1" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
+              <circle cx="20" cy="17" r="6" stroke="#15304B" strokeWidth="2" fill="#fff" />
+              <path d="M28 29c0-4-3.6-7-8-7s-8 3-8 7" stroke="#15304B" strokeWidth="2" fill="#fff" />
+              <circle cx="28" cy="28" r="5" fill="#F7B32B" stroke="#15304B" strokeWidth="2" />
+              <path d="M26.5 28.5l1.5 1.5 3-3" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Matched with a Disability Attorney</h3>
             <p className="body-sans text-base text-[#15304B]">We instantly connect you with a qualified attorney who specializes in Social Security Disability cases.</p>
