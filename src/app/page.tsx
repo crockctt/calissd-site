@@ -142,7 +142,7 @@ export default function Home() {
       {/* Stats/Trust Section */}
       <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]">
         <div className="max-w-none w-full px-0">
-          <h3 className="heading-display text-3xl font-extrabold text-[#15304B] mb-12 pl-8">We Will Connect You</h3>
+          <h3 className="heading-display text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-12 pl-8">We Will Connect You</h3>
           <div className="flex flex-col md:flex-row justify-between items-stretch w-full gap-0">
             <div className="flex-1 flex flex-col items-start justify-center py-10 px-8 gap-2 border-r-2 border-[#F7B32B]">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10 mb-2" stroke="#F7B32B" strokeWidth="2">
