@@ -40,7 +40,7 @@ export default function Home() {
             Connect instantly with a top California disability attorney. Your free consultation is just one click away.
           </p>
           <button
-            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 animate-glow hover:scale-105 transition-transform duration-200 self-center sm:self-start"
+            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 self-center sm:self-start"
             data-tally-open="mZg1Oe"
             data-tally-layout="modal"
             data-tally-width="600"
@@ -49,8 +49,7 @@ export default function Home() {
             data-tally-overlay="rgba(21,48,75,0.7)"
             style={{ cursor: 'pointer' }}
           >
-            <span className="relative z-10">Get Your Free Consultation</span>
-            <span className="absolute inset-0 rounded-full bg-[#F7B32B] opacity-30 blur-lg animate-glow" aria-hidden="true"></span>
+            Get Your Free Consultation
           </button>
         </div>
       </section>
