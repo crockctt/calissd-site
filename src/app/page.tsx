@@ -11,21 +11,21 @@ export default function Home() {
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Top Navigation Bar */}
-      <nav className="sticky-nav w-full flex items-center justify-between px-10 py-6 bg-[#F6F3EE]">
-        <div className="flex items-center gap-4">
+      <nav className="sticky-nav w-full flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-10 py-4 sm:py-6 bg-[#F6F3EE]">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full">
           <Image
             src="/Calissdlogo.PNG"
             alt="CaliSSD Logo"
-            width={90}
-            height={90}
-            className="rounded-md self-start"
+            width={60}
+            height={60}
+            className="rounded-md self-center sm:self-start mb-2 sm:mb-0"
             priority
           />
-          <div className="flex flex-col ml-4 justify-center h-[90px]">
-            <span className="heading-display text-3xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+          <div className="flex flex-col ml-0 sm:ml-4 justify-center h-auto sm:h-[90px] text-center sm:text-left w-full">
+            <span className="heading-display text-2xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
               California Social
             </span>
-            <span className="heading-display text-3xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+            <span className="heading-display text-2xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
               Security Disability
             </span>
           </div>
@@ -33,15 +33,15 @@ export default function Home() {
       </nav>
       <hr className="gold-divider" />
       {/* Hero Section */}
-      <section className="hero-bg section pt-20 pb-16 border-b-0">
-        <h1 className="heading-display text-5xl sm:text-6xl font-extrabold mb-6 text-[#15304B] leading-tight">
+      <section className="hero-bg section pt-10 sm:pt-20 pb-10 sm:pb-16 border-b-0">
+        <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight">
           Get Help With Your Social Security Disability Claim
         </h1>
-        <p className="body-sans text-2xl mb-10 text-[#15304B] font-medium max-w-2xl">
+        <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl">
           Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
         </p>
         <button
-          className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
+          className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
           data-tally-open="mZg1Oe"
           data-tally-layout="modal"
           data-tally-width="600"
@@ -56,8 +56,8 @@ export default function Home() {
       {/* How It Works Section */}
       <section className="section pt-8 pb-8">
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="icon-card flex-1">
+        <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
             {/* Modern phone icon */}
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
@@ -70,7 +70,7 @@ export default function Home() {
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Fill Out the Form</h3>
             <p className="body-sans text-base text-[#15304B]">Tell us about your situation by completing a short form with your contact details and disability type.</p>
           </div>
-          <div className="icon-card flex-1">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
               <circle cx="20" cy="17" r="6" stroke="#15304B" strokeWidth="2" fill="#fff" />
@@ -81,7 +81,7 @@ export default function Home() {
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get Matched with an Attorney</h3>
             <p className="body-sans text-base text-[#15304B]">We connect you with a qualified disability attorney who understands your case.</p>
           </div>
-          <div className="icon-card flex-1">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
               <path d="M14 21l5 5 7-9" stroke="#15304B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
@@ -92,11 +92,11 @@ export default function Home() {
         </div>
       </section>
       {/* Stats/Trust Section */}
-      <section className="w-full py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]" style={{ borderTop: '3px solid #F7B32B' }}>
-        <div className="max-w-3xl mx-auto px-4">
-          <h3 className="heading-display text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-6 text-center">We Will Connect You</h3>
-          <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row justify-center items-center gap-10 py-12 px-6 md:px-12">
-            <div className="flex flex-col items-center flex-1 border-b-2 md:border-b-0 md:border-r-2 border-[#F7B32B] pb-8 md:pb-0 md:pr-10">
+      <section className="w-full py-10 sm:py-16 px-0 bg-gradient-to-b from-[#fffbe8] via-[#fff] to-[#fff]" style={{ borderTop: '3px solid #F7B32B' }}>
+        <div className="max-w-3xl mx-auto px-2 sm:px-4">
+          <h3 className="heading-display text-3xl sm:text-6xl font-extrabold text-[#15304B] mb-4 sm:mb-6 text-center">We Will Connect You</h3>
+          <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-10 py-8 sm:py-12 px-3 sm:px-12">
+            <div className="flex flex-col items-center flex-1 border-b-2 md:border-b-0 md:border-r-2 border-[#F7B32B] pb-6 md:pb-0 md:pr-10">
               {/* Group/People Icon */}
               <svg width="48" height="48" fill="none" viewBox="0 0 48 48" className="mb-3">
                 <circle cx="24" cy="24" r="22" stroke="#F7B32B" strokeWidth="3" />
@@ -108,7 +108,7 @@ export default function Home() {
               <span className="text-4xl font-extrabold text-[#F7B32B]">100+</span>
               <span className="text-lg text-[#15304B] font-medium">People Helped</span>
             </div>
-            <div className="flex flex-col items-center flex-1 pt-8 md:pt-0 md:pl-10">
+            <div className="flex flex-col items-center flex-1 pt-6 md:pt-0 md:pl-10">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12 mb-3" stroke="#15304B" strokeWidth="2">
                 <circle cx="16" cy="16" r="12" stroke="#15304B" strokeWidth="2"/>
                 <path d="M16 10v6l4 2" stroke="#15304B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
