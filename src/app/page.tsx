@@ -10,14 +10,14 @@ export default function Home() {
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Top Navigation Bar */}
-      <nav className="sticky-nav w-full flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-10 py-4 sm:py-6 bg-[#F6F3EE]">
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full">
-          <div className="flex flex-col items-center sm:items-start ml-0 sm:ml-4 justify-center h-auto sm:h-[90px] text-center sm:text-left w-full">
-            <span className="heading-display text-3xl sm:text-5xl font-extrabold text-[#15304B] tracking-tight leading-tight relative" style={{ letterSpacing: '-0.01em' }}>
+      <nav className="sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 bg-transparent backdrop-blur-md z-50">
+        <div className="flex items-center gap-4">
+          <img src="/Calissdlogo.PNG" alt="CaliSSD Logo" className="w-14 h-14 sm:w-20 sm:h-20 rounded-lg shadow-lg border-2 border-[#F7B32B] bg-white/80" />
+          <div className="flex flex-col ml-3">
+            <span className="heading-display text-2xl sm:text-4xl font-extrabold text-[#15304B] tracking-tight leading-tight drop-shadow-lg" style={{ letterSpacing: '-0.01em' }}>
               California Social
-              <span className="block w-12 sm:w-20 h-1 bg-[#F7B32B] rounded-full mt-2 mx-auto sm:mx-0"></span>
             </span>
-            <span className="heading-display text-2xl sm:text-3xl font-semibold text-[#15304B] tracking-tight leading-tight mt-1" style={{ letterSpacing: '-0.01em' }}>
+            <span className="heading-display text-lg sm:text-2xl font-semibold text-[#15304B] tracking-tight leading-tight mt-1 drop-shadow-md" style={{ letterSpacing: '-0.01em' }}>
               Security Disability
             </span>
           </div>
@@ -25,31 +25,34 @@ export default function Home() {
       </nav>
       <hr className="gold-divider" />
       {/* Hero Section */}
-      <section className="hero-bg section pt-10 sm:pt-20 pb-10 sm:pb-16 border-b-0">
-        <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight">
-          Get Help With Your Social Security Disability Claim
-        </h1>
-        <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl">
-          Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
-        </p>
-        <button
-          className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-2xl shadow-xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2"
-          data-tally-open="mZg1Oe"
-          data-tally-layout="modal"
-          data-tally-width="600"
-          data-tally-emoji-text=""
-          data-tally-auto-close="true"
-          data-tally-overlay="rgba(21,48,75,0.7)"
-          style={{ cursor: 'pointer' }}
-        >
-          Get Your Free Consultation
-        </button>
+      <section className="relative flex flex-col items-center justify-center min-h-[60vh] py-12 sm:py-24 overflow-hidden">
+        <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-tr from-[#F7B32B]/30 via-[#F6F3EE] to-[#15304B]/10 blur-2xl opacity-80" />
+        <div className="bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl px-6 sm:px-16 py-10 sm:py-16 flex flex-col items-center max-w-2xl mx-auto animate-fade-in">
+          <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight text-center drop-shadow-xl">
+            Get Help With Your Social Security Disability Claim
+          </h1>
+          <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl text-center">
+            Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
+          </p>
+          <button
+            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 animate-glow hover:scale-105 transition-transform duration-200"
+            data-tally-open="mZg1Oe"
+            data-tally-layout="modal"
+            data-tally-width="600"
+            data-tally-emoji-text=""
+            data-tally-auto-close="true"
+            data-tally-overlay="rgba(21,48,75,0.7)"
+            style={{ cursor: 'pointer' }}
+          >
+            Get Your Free Consultation
+          </button>
+        </div>
       </section>
       {/* How It Works Section */}
       <section className="section pt-8 pb-8">
         <h2 className="heading-display text-3xl font-extrabold text-[#15304B] mb-10">How It Works</h2>
-        <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
-          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
+        <div className="flex flex-col md:flex-row gap-6 sm:gap-8 animate-fade-in-up">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left transition-transform duration-200 hover:scale-105 hover:shadow-2xl">
             {/* Modern phone icon */}
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
@@ -62,7 +65,7 @@ export default function Home() {
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Fill Out the Form</h3>
             <p className="body-sans text-base text-[#15304B]">Tell us about your situation by completing a short form with your contact details and disability type.</p>
           </div>
-          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left transition-transform duration-200 hover:scale-105 hover:shadow-2xl">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
               <circle cx="20" cy="17" r="6" stroke="#15304B" strokeWidth="2" fill="#fff" />
@@ -73,7 +76,7 @@ export default function Home() {
             <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Get Matched with an Attorney</h3>
             <p className="body-sans text-base text-[#15304B]">We connect you with a qualified disability attorney who understands your case.</p>
           </div>
-          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left">
+          <div className="icon-card flex-1 items-center sm:items-start text-center sm:text-left transition-transform duration-200 hover:scale-105 hover:shadow-2xl">
             <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
               <circle cx="20" cy="20" r="18" stroke="#F7B32B" strokeWidth="3" />
               <path d="M14 21l5 5 7-9" stroke="#15304B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="#fff" />
