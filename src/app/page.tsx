@@ -13,19 +13,12 @@ export default function Home() {
       {/* Top Navigation Bar */}
       <nav className="sticky-nav w-full flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-10 py-4 sm:py-6 bg-[#F6F3EE]">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full">
-          <Image
-            src="/Calissdlogo.PNG"
-            alt="CaliSSD Logo"
-            width={60}
-            height={60}
-            className="rounded-md self-center sm:self-start mb-2 sm:mb-0"
-            priority
-          />
-          <div className="flex flex-col ml-0 sm:ml-4 justify-center h-auto sm:h-[90px] text-center sm:text-left w-full">
-            <span className="heading-display text-2xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+          <div className="flex flex-col items-center sm:items-start ml-0 sm:ml-4 justify-center h-auto sm:h-[90px] text-center sm:text-left w-full">
+            <span className="heading-display text-3xl sm:text-5xl font-extrabold text-[#15304B] tracking-tight leading-tight relative" style={{ letterSpacing: '-0.01em' }}>
               California Social
+              <span className="block w-12 sm:w-20 h-1 bg-[#F7B32B] rounded-full mt-2 mx-auto sm:mx-0"></span>
             </span>
-            <span className="heading-display text-2xl sm:text-4xl font-bold text-[#15304B] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>
+            <span className="heading-display text-2xl sm:text-3xl font-semibold text-[#15304B] tracking-tight leading-tight mt-1" style={{ letterSpacing: '-0.01em' }}>
               Security Disability
             </span>
           </div>
