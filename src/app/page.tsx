@@ -30,10 +30,8 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <a href="tel:6519648710" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow hover:bg-[#e6a821] transition border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2">
-          Call Now: 651-964-8710
-        </a>
       </nav>
+      <hr className="gold-divider" />
       {/* Hero Section */}
       <section className="hero-bg section pt-20 pb-16 border-b-0">
         <h1 className="heading-display text-5xl sm:text-6xl font-extrabold mb-6 text-[#15304B] leading-tight">
