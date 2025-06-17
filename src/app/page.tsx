@@ -27,15 +27,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-[60vh] py-12 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-tr from-[#F7B32B]/30 via-[#F6F3EE] to-[#15304B]/10 blur-2xl opacity-80" />
-        <div className="bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl px-6 sm:px-16 py-10 sm:py-16 flex flex-col items-center max-w-2xl mx-auto animate-fade-in">
-          <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight text-center drop-shadow-xl">
+        <div className="bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl px-6 sm:px-16 py-10 sm:py-16 flex flex-col items-center sm:items-start max-w-2xl mx-auto animate-fade-in">
+          <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight text-center sm:text-left drop-shadow-xl">
             Get Help With Your Social Security Disability Claim
           </h1>
-          <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl text-center">
+          <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl text-center sm:text-left">
             Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
           </p>
           <button
-            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 animate-glow hover:scale-105 transition-transform duration-200"
+            className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 animate-glow hover:scale-105 transition-transform duration-200 self-center sm:self-start"
             data-tally-open="mZg1Oe"
             data-tally-layout="modal"
             data-tally-width="600"
