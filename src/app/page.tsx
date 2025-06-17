@@ -26,13 +26,18 @@ export default function Home() {
       <hr className="gold-divider" />
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-[60vh] py-12 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-tr from-[#F7B32B]/30 via-[#F6F3EE] to-[#15304B]/10 blur-2xl opacity-80" />
-        <div className="bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl px-6 sm:px-16 py-10 sm:py-16 flex flex-col items-center sm:items-start max-w-2xl mx-auto animate-fade-in">
-          <h1 className="heading-display text-3xl sm:text-6xl font-extrabold mb-4 sm:mb-6 text-[#15304B] leading-tight text-center sm:text-left drop-shadow-xl">
-            Get Help With Your Social Security Disability Claim
+        <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-tr from-[#F7B32B]/40 via-[#F6F3EE] to-[#15304B]/10 blur-2xl opacity-90" />
+        <div className="bg-white/80 backdrop-blur-2xl rounded-3xl shadow-2xl px-6 sm:px-16 py-10 sm:py-20 flex flex-col items-center sm:items-start max-w-2xl mx-auto animate-fade-in">
+          <h1 className="heading-display text-4xl sm:text-6xl font-extrabold mb-2 sm:mb-4 text-[#15304B] leading-tight text-center sm:text-left drop-shadow-xl">
+            Get the <span className="text-[#F7B32B] inline-block">Benefits</span> You Deserve.
           </h1>
-          <p className="body-sans text-lg sm:text-2xl mb-6 sm:mb-10 text-[#15304B] font-medium max-w-xl sm:max-w-2xl text-center sm:text-left">
-            Start your free, no-obligation consultation today. We connect you with experienced disability attorneys who can help you get the benefits you deserve—fast, easy, and confidential.
+          <div className="flex items-center gap-2 mb-4 sm:mb-6">
+            <span className="text-[#F7B32B] font-bold text-lg sm:text-2xl tracking-wide animate-pulse">Fast.</span>
+            <span className="text-[#F7B32B] font-bold text-lg sm:text-2xl tracking-wide animate-pulse">Easy.</span>
+            <span className="text-[#F7B32B] font-bold text-lg sm:text-2xl tracking-wide animate-pulse">Confidential.</span>
+          </div>
+          <p className="body-sans text-base sm:text-xl mb-8 sm:mb-12 text-[#15304B] font-medium max-w-xl sm:max-w-2xl text-center sm:text-left">
+            Connect instantly with a top California disability attorney. Your free consultation is just one click away.
           </p>
           <button
             className="tally-open button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 sm:px-16 py-4 sm:py-6 text-lg sm:text-2xl shadow-2xl border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 animate-glow hover:scale-105 transition-transform duration-200 self-center sm:self-start"
@@ -44,7 +49,8 @@ export default function Home() {
             data-tally-overlay="rgba(21,48,75,0.7)"
             style={{ cursor: 'pointer' }}
           >
-            Get Your Free Consultation
+            <span className="relative z-10">Get Your Free Consultation</span>
+            <span className="absolute inset-0 rounded-full bg-[#F7B32B] opacity-30 blur-lg animate-glow" aria-hidden="true"></span>
           </button>
         </div>
       </section>
