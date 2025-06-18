@@ -64,14 +64,16 @@ export default function Home() {
           aria-label="Open menu"
           onClick={() => setMenuOpen((v) => !v)}
         >
-          <span className="block w-6 h-0.5 bg-[#15304B] mb-1 rounded-full"></span>
-          <span className="block w-6 h-0.5 bg-[#15304B] mb-1 rounded-full"></span>
-          <span className="block w-6 h-0.5 bg-[#15304B] rounded-full"></span>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="5" width="28" height="3" rx="1.5" fill="#15304B" />
+            <rect y="12.5" width="28" height="3" rx="1.5" fill="#15304B" />
+            <rect y="20" width="28" height="3" rx="1.5" fill="#15304B" />
+          </svg>
         </button>
         {/* Dropdown/modal menu */}
         {menuOpen && (
           <div className="fixed inset-0 z-40 flex items-start justify-end" style={{background: 'rgba(0,0,0,0.5)', transition: 'background 0.3s'}} onClick={() => setMenuOpen(false)}>
-            <div className="menu-modal bg-white/70 backdrop-blur-2xl shadow-2xl w-full max-w-md p-6 mt-0 sm:mt-8 mr-0 sm:mr-8 animate-fade-in-up overflow-y-auto h-full sm:h-auto rounded-l-2xl" style={{transform: 'translateX(0)', transition: 'transform 0.4s cubic-bezier(0.4,0,0.2,1)'}} onClick={e => e.stopPropagation()} tabIndex={-1} aria-modal="true" role="dialog">
+            <div className="menu-modal bg-white shadow-2xl w-full max-w-md p-6 mt-0 sm:mt-8 mr-0 sm:mr-8 animate-fade-in-up overflow-y-auto h-full sm:h-auto rounded-l-2xl" style={{transform: 'translateX(0)', transition: 'transform 0.4s cubic-bezier(0.4,0,0.2,1)'}} onClick={e => e.stopPropagation()} tabIndex={-1} aria-modal="true" role="dialog">
               <button className="absolute top-4 right-4 text-2xl font-bold text-[#15304B] focus:ring-2 focus:ring-[#F7B32B]" aria-label="Close menu" onClick={() => setMenuOpen(false)}>&times;</button>
               <h2 className="heading-display text-2xl font-bold text-[#15304B] mb-4">Menu</h2>
               {/* FAQ Accordion */}
