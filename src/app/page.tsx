@@ -74,7 +74,7 @@ export default function Home() {
         </button>
         {/* Dropdown/modal menu */}
         {menuOpen && (
-          <div className="fixed inset-0 z-40 flex items-start justify-end" style={{background: 'rgba(0,0,0,0.5)', transition: 'background 0.3s'}} onClick={() => setMenuOpen(false)}>
+          <div className="fixed inset-0 z-40 flex items-start justify-end" style={{background: 'rgba(255,255,255,0.6)', transition: 'background 0.3s'}} onClick={() => setMenuOpen(false)}>
             <div className="menu-modal bg-white shadow-2xl w-full max-w-md p-6 mt-0 sm:mt-8 mr-0 sm:mr-8 animate-fade-in-up overflow-y-auto h-full sm:h-auto rounded-l-2xl" style={{transform: 'translateX(0)', transition: 'transform 0.4s cubic-bezier(0.4,0,0.2,1)'}} onClick={e => e.stopPropagation()} tabIndex={-1} aria-modal="true" role="dialog">
               <button className="absolute top-4 right-4 text-2xl font-bold text-[#15304B] focus:ring-2 focus:ring-[#F7B32B]" aria-label="Close menu" onClick={() => setMenuOpen(false)}>&times;</button>
               <h2 className="heading-display text-2xl font-bold text-[#15304B] mb-4">Menu</h2>
