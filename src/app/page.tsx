@@ -1,9 +1,32 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Script from "next/script";
+
+// Extend window type for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
 
 export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleTallySubmit(e: MessageEvent) {
+      if (e.data?.event === 'Tally.FormSubmitted') {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17059308391/AjDiCISrxMMaEOfGwcY_',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        }
+      }
+    }
+    window.addEventListener('message', handleTallySubmit);
+    return () => window.removeEventListener('message', handleTallySubmit);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F6F3EE] flex flex-col relative font-sans">
