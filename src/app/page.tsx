@@ -139,7 +139,7 @@ export default function Home() {
                     )}
                     <div className="mt-4 text-[#15304B] text-base">
                       <div className="font-semibold mb-1">Or contact us directly:</div>
-                      <div>Email: <a href="mailto:info@calissd.com" className="underline text-[#F7B32B]">info@calissd.com</a></div>
+                      <div>Email: <a href="mailto:calileads11@gmail.com" className="underline text-[#F7B32B]">calileads11@gmail.com</a></div>
                       <div>Phone: <a href="tel:6519648710" className="underline text-[#F7B32B]">651-964-8710</a></div>
                     </div>
                   </div>
