@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Script from "next/script";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -11,9 +11,19 @@ declare global {
   }
 }
 
+const FAQS = [
+  {q: "Who will contact me after I submit the form?", a: "A qualified California disability attorney will reach out to you for your free consultation."},
+  {q: "Is my information confidential?", a: "Yes, your information is 100% confidential and only shared with a trusted attorney."},
+  {q: "How much does the consultation cost?", a: "The consultation is completely free and there is no obligation to proceed."},
+  {q: "How fast will I get a response?", a: "Most people receive a response within 24 hours."},
+];
+
 export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [faqOpen, setFaqOpen] = useState<number | null>(null);
+  const [contactSuccess, setContactSuccess] = useState(false);
 
   useEffect(() => {
     function handleTallySubmit(e: MessageEvent) {
@@ -49,6 +59,69 @@ export default function Home() {
             </span>
           </div>
         </div>
+        <button
+          className="ml-auto flex items-center justify-center w-10 h-10 rounded-full hover:bg-[#F7B32B]/20 transition relative z-20 focus:ring-2 focus:ring-[#F7B32B]"
+          aria-label="Open menu"
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          <span className="block w-6 h-0.5 bg-[#15304B] mb-1 rounded-full"></span>
+          <span className="block w-6 h-0.5 bg-[#15304B] mb-1 rounded-full"></span>
+          <span className="block w-6 h-0.5 bg-[#15304B] rounded-full"></span>
+        </button>
+        {/* Dropdown/modal menu */}
+        {menuOpen && (
+          <div className="fixed inset-0 z-40 flex items-start justify-end" style={{background: 'rgba(0,0,0,0.5)', transition: 'background 0.3s'}} onClick={() => setMenuOpen(false)}>
+            <div className="menu-modal bg-white/70 backdrop-blur-2xl shadow-2xl w-full max-w-md p-6 mt-0 sm:mt-8 mr-0 sm:mr-8 animate-fade-in-up overflow-y-auto h-full sm:h-auto rounded-l-2xl" style={{transform: 'translateX(0)', transition: 'transform 0.4s cubic-bezier(0.4,0,0.2,1)'}} onClick={e => e.stopPropagation()} tabIndex={-1} aria-modal="true" role="dialog">
+              <button className="absolute top-4 right-4 text-2xl font-bold text-[#15304B] focus:ring-2 focus:ring-[#F7B32B]" aria-label="Close menu" onClick={() => setMenuOpen(false)}>&times;</button>
+              <h2 className="heading-display text-2xl font-bold text-[#15304B] mb-4">Menu</h2>
+              {/* FAQ Accordion */}
+              <div className="mb-8 faq-accordion">
+                <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">FAQ</h3>
+                <div className="divide-y divide-[#F7B32B]/40">
+                  {FAQS.map((item, i) => (
+                    <div key={i} className="border-l-4" style={{borderColor: faqOpen === i ? '#F7B32B' : 'transparent'}}>
+                      <button
+                        className="w-full text-left py-3 font-semibold text-[#15304B] flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
+                        onClick={() => setFaqOpen(faqOpen === i ? null : i)}
+                        aria-expanded={faqOpen === i}
+                        aria-controls={`faq-panel-${i}`}
+                      >
+                        {item.q}
+                        <svg className={`ml-2 w-5 h-5 transition-transform duration-200 ${faqOpen === i ? 'rotate-90' : ''}`} fill="none" stroke="#15304B" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+                      </button>
+                      <div
+                        id={`faq-panel-${i}`}
+                        className={`faq-panel overflow-hidden transition-all duration-300 ${faqOpen === i ? 'max-h-40 py-2' : 'max-h-0 py-0'}`}
+                        aria-hidden={faqOpen !== i}
+                      >
+                        <p className="text-[#15304B] text-base pl-2">{item.a}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Contact Us Form */}
+              <div>
+                <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Contact Us</h3>
+                {contactSuccess ? (
+                  <div className="text-green-700 font-semibold mb-4">Thank you! We received your message.</div>
+                ) : (
+                  <form className="flex flex-col gap-4" onSubmit={e => {e.preventDefault(); setContactSuccess(true); setTimeout(() => { setMenuOpen(false); setContactSuccess(false); router.push('/thank-you'); }, 1200);}}>
+                    <input type="text" name="name" placeholder="Your Name" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                    <input type="email" name="email" placeholder="Your Email" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                    <textarea name="message" placeholder="How can we help you?" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                    <button type="submit" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Send Message</button>
+                  </form>
+                )}
+                <div className="mt-4 text-[#15304B] text-base">
+                  <div className="font-semibold mb-1">Or contact us directly:</div>
+                  <div>Email: <a href="mailto:info@calissd.com" className="underline text-[#F7B32B]">info@calissd.com</a></div>
+                  <div>Phone: <a href="tel:6519648710" className="underline text-[#F7B32B]">651-964-8710</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
       <hr className="gold-divider" />
       {/* Hero Section */}
