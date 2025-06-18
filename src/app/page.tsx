@@ -24,6 +24,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
   const [contactSuccess, setContactSuccess] = useState(false);
+  const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
 
   useEffect(() => {
     function handleTallySubmit(e: MessageEvent) {
@@ -47,7 +48,7 @@ export default function Home() {
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Top Navigation Bar */}
-      <nav className="sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 bg-transparent backdrop-blur-md z-50">
+      <nav className={`sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 bg-transparent backdrop-blur-md transition-z duration-200 ${menuOpen ? 'z-30' : 'z-50'}`}>
         <div className="flex items-center gap-4">
           <Image src="/Calissdlogo.PNG" alt="CaliSSD Logo" width={80} height={80} className="w-14 h-14 sm:w-20 sm:h-20 rounded-lg shadow-lg border-2 border-[#F7B32B] bg-white/80" />
           <div className="flex flex-col ml-3">
@@ -76,31 +77,41 @@ export default function Home() {
             <div className="menu-modal bg-white shadow-2xl w-full max-w-md p-6 mt-0 sm:mt-8 mr-0 sm:mr-8 animate-fade-in-up overflow-y-auto h-full sm:h-auto rounded-l-2xl" style={{transform: 'translateX(0)', transition: 'transform 0.4s cubic-bezier(0.4,0,0.2,1)'}} onClick={e => e.stopPropagation()} tabIndex={-1} aria-modal="true" role="dialog">
               <button className="absolute top-4 right-4 text-2xl font-bold text-[#15304B] focus:ring-2 focus:ring-[#F7B32B]" aria-label="Close menu" onClick={() => setMenuOpen(false)}>&times;</button>
               <h2 className="heading-display text-2xl font-bold text-[#15304B] mb-4">Menu</h2>
-              {/* FAQ Accordion */}
-              <div className="mb-8 faq-accordion">
-                <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">FAQ</h3>
-                <div className="divide-y divide-[#F7B32B]/40">
-                  {FAQS.map((item, i) => (
-                    <div key={i} className="border-l-4" style={{borderColor: faqOpen === i ? '#F7B32B' : 'transparent'}}>
-                      <button
-                        className="w-full text-left py-3 font-semibold text-[#15304B] flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
-                        onClick={() => setFaqOpen(faqOpen === i ? null : i)}
-                        aria-expanded={faqOpen === i}
-                        aria-controls={`faq-panel-${i}`}
-                      >
-                        {item.q}
-                        <svg className={`ml-2 w-5 h-5 transition-transform duration-200 ${faqOpen === i ? 'rotate-90' : ''}`} fill="none" stroke="#15304B" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
-                      </button>
-                      <div
-                        id={`faq-panel-${i}`}
-                        className={`faq-panel overflow-hidden transition-all duration-300 ${faqOpen === i ? 'max-h-40 py-2' : 'max-h-0 py-0'}`}
-                        aria-hidden={faqOpen !== i}
-                      >
-                        <p className="text-[#15304B] text-base pl-2">{item.a}</p>
+              {/* FAQ Dropdown */}
+              <div className="mb-8">
+                <button
+                  className="w-full flex items-center justify-between py-3 px-2 font-bold text-xl text-[#15304B] bg-[#F6F3EE] rounded-lg shadow-sm hover:bg-[#F7B32B]/20 transition mb-2 focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
+                  onClick={() => setFaqDropdownOpen(v => !v)}
+                  aria-expanded={faqDropdownOpen}
+                  aria-controls="faq-dropdown-panel"
+                >
+                  FAQ
+                  <svg className={`ml-2 w-6 h-6 transition-transform duration-200 ${faqDropdownOpen ? 'rotate-90' : ''}`} fill="none" stroke="#15304B" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+                </button>
+                {faqDropdownOpen && (
+                  <div id="faq-dropdown-panel" className="divide-y divide-[#F7B32B]/40 bg-white rounded-lg shadow-md mt-1">
+                    {FAQS.map((item, i) => (
+                      <div key={i} className="border-l-4" style={{borderColor: faqOpen === i ? '#F7B32B' : 'transparent'}}>
+                        <button
+                          className="w-full text-left py-3 px-3 font-semibold text-[#15304B] flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
+                          onClick={() => setFaqOpen(faqOpen === i ? null : i)}
+                          aria-expanded={faqOpen === i}
+                          aria-controls={`faq-panel-${i}`}
+                        >
+                          {item.q}
+                          <svg className={`ml-2 w-5 h-5 transition-transform duration-200 ${faqOpen === i ? 'rotate-90' : ''}`} fill="none" stroke="#15304B" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <div
+                          id={`faq-panel-${i}`}
+                          className={`faq-panel overflow-hidden transition-all duration-300 bg-[#F6F3EE] ${faqOpen === i ? 'max-h-40 py-2' : 'max-h-0 py-0'}`}
+                          aria-hidden={faqOpen !== i}
+                        >
+                          <p className="text-[#15304B] text-base pl-4 pr-2">{item.a}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
               {/* Contact Us Form */}
               <div>
