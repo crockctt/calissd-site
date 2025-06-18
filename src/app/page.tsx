@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import Script from "next/script";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // Extend window type for gtag
 declare global {
@@ -12,6 +13,7 @@ declare global {
 
 export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     function handleTallySubmit(e: MessageEvent) {
@@ -23,11 +25,12 @@ export default function Home() {
             'currency': 'USD'
           });
         }
+        router.push('/thank-you');
       }
     }
     window.addEventListener('message', handleTallySubmit);
     return () => window.removeEventListener('message', handleTallySubmit);
-  }, []);
+  }, [router]);
 
   return (
     <div className="min-h-screen bg-[#F6F3EE] flex flex-col relative font-sans">
