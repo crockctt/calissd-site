@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import Script from "next/script";
+import Image from "next/image";
 
 // Extend window type for gtag
 declare global {
@@ -13,7 +14,7 @@ export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleTallySubmit(e: MessageEvent<{ event: string }>) {
+    function handleTallySubmit(e: MessageEvent) {
       if (e.data?.event === 'Tally.FormSubmitted') {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'conversion', {
@@ -35,7 +36,7 @@ export default function Home() {
       {/* Top Navigation Bar */}
       <nav className="sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 bg-transparent backdrop-blur-md z-50">
         <div className="flex items-center gap-4">
-          <img src="/Calissdlogo.PNG" alt="CaliSSD Logo" className="w-14 h-14 sm:w-20 sm:h-20 rounded-lg shadow-lg border-2 border-[#F7B32B] bg-white/80" />
+          <Image src="/Calissdlogo.PNG" alt="CaliSSD Logo" width={80} height={80} className="w-14 h-14 sm:w-20 sm:h-20 rounded-lg shadow-lg border-2 border-[#F7B32B] bg-white/80" />
           <div className="flex flex-col ml-3">
             <span className="heading-display text-2xl sm:text-4xl font-extrabold text-[#15304B] tracking-tight leading-tight drop-shadow-lg" style={{ letterSpacing: '-0.01em' }}>
               California Social
