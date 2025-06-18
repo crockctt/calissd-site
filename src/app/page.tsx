@@ -6,7 +6,7 @@ import Image from "next/image";
 // Extend window type for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
