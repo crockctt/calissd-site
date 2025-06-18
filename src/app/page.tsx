@@ -13,7 +13,7 @@ export default function Home() {
   const surveyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleTallySubmit(e: MessageEvent) {
+    function handleTallySubmit(e: MessageEvent<{ event: string }>) {
       if (e.data?.event === 'Tally.FormSubmitted') {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'conversion', {
