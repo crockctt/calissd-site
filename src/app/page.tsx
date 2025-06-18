@@ -25,6 +25,7 @@ export default function Home() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
   const [contactSuccess, setContactSuccess] = useState(false);
   const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
+  const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
   useEffect(() => {
     function handleTallySubmit(e: MessageEvent) {
@@ -48,7 +49,7 @@ export default function Home() {
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Top Navigation Bar */}
-      <nav className={`sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 bg-transparent backdrop-blur-md transition-z duration-200 ${menuOpen ? 'z-30' : 'z-50'}`}>
+      <nav className={`sticky-nav w-full flex items-center justify-between px-4 sm:px-10 py-4 sm:py-6 transition-z duration-200 ${menuOpen ? 'z-30 bg-white' : 'z-50 bg-transparent backdrop-blur-md'}`}>
         <div className="flex items-center gap-4">
           <Image src="/Calissdlogo.PNG" alt="CaliSSD Logo" width={80} height={80} className="w-14 h-14 sm:w-20 sm:h-20 rounded-lg shadow-lg border-2 border-[#F7B32B] bg-white/80" />
           <div className="flex flex-col ml-3">
@@ -78,7 +79,7 @@ export default function Home() {
               <button className="absolute top-4 right-4 text-2xl font-bold text-[#15304B] focus:ring-2 focus:ring-[#F7B32B]" aria-label="Close menu" onClick={() => setMenuOpen(false)}>&times;</button>
               <h2 className="heading-display text-2xl font-bold text-[#15304B] mb-4">Menu</h2>
               {/* FAQ Dropdown */}
-              <div className="mb-8">
+              <div className="mb-4">
                 <button
                   className="w-full flex items-center justify-between py-3 px-2 font-bold text-xl text-[#15304B] bg-[#F6F3EE] rounded-lg shadow-sm hover:bg-[#F7B32B]/20 transition mb-2 focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
                   onClick={() => setFaqDropdownOpen(v => !v)}
@@ -113,24 +114,36 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              {/* Contact Us Form */}
-              <div>
-                <h3 className="heading-display text-xl font-bold text-[#15304B] mb-2">Contact Us</h3>
-                {contactSuccess ? (
-                  <div className="text-green-700 font-semibold mb-4">Thank you! We received your message.</div>
-                ) : (
-                  <form className="flex flex-col gap-4" onSubmit={e => {e.preventDefault(); setContactSuccess(true); setTimeout(() => { setMenuOpen(false); setContactSuccess(false); router.push('/thank-you'); }, 1200);}}>
-                    <input type="text" name="name" placeholder="Your Name" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
-                    <input type="email" name="email" placeholder="Your Email" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
-                    <textarea name="message" placeholder="How can we help you?" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
-                    <button type="submit" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Send Message</button>
-                  </form>
+              {/* Contact Us Dropdown */}
+              <div className="mb-8">
+                <button
+                  className="w-full flex items-center justify-between py-3 px-2 font-bold text-xl text-[#15304B] bg-[#F6F3EE] rounded-lg shadow-sm hover:bg-[#F7B32B]/20 transition mb-2 focus:outline-none focus:ring-2 focus:ring-[#F7B32B]"
+                  onClick={() => setContactDropdownOpen(v => !v)}
+                  aria-expanded={contactDropdownOpen}
+                  aria-controls="contact-dropdown-panel"
+                >
+                  Contact Us
+                  <svg className={`ml-2 w-6 h-6 transition-transform duration-200 ${contactDropdownOpen ? 'rotate-90' : ''}`} fill="none" stroke="#15304B" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+                </button>
+                {contactDropdownOpen && (
+                  <div id="contact-dropdown-panel" className="bg-white rounded-lg shadow-md mt-1 p-4">
+                    {contactSuccess ? (
+                      <div className="text-green-700 font-semibold mb-4">Thank you! We received your message.</div>
+                    ) : (
+                      <form className="flex flex-col gap-4" onSubmit={e => {e.preventDefault(); setContactSuccess(true); setTimeout(() => { setMenuOpen(false); setContactSuccess(false); router.push('/thank-you'); }, 1200);}}>
+                        <input type="text" name="name" placeholder="Your Name" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                        <input type="email" name="email" placeholder="Your Email" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                        <textarea name="message" placeholder="How can we help you?" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
+                        <button type="submit" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Send Message</button>
+                      </form>
+                    )}
+                    <div className="mt-4 text-[#15304B] text-base">
+                      <div className="font-semibold mb-1">Or contact us directly:</div>
+                      <div>Email: <a href="mailto:info@calissd.com" className="underline text-[#F7B32B]">info@calissd.com</a></div>
+                      <div>Phone: <a href="tel:6519648710" className="underline text-[#F7B32B]">651-964-8710</a></div>
+                    </div>
+                  </div>
                 )}
-                <div className="mt-4 text-[#15304B] text-base">
-                  <div className="font-semibold mb-1">Or contact us directly:</div>
-                  <div>Email: <a href="mailto:info@calissd.com" className="underline text-[#F7B32B]">info@calissd.com</a></div>
-                  <div>Phone: <a href="tel:6519648710" className="underline text-[#F7B32B]">651-964-8710</a></div>
-                </div>
               </div>
             </div>
           </div>
