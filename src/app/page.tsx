@@ -38,7 +38,7 @@ export default function Home() {
             'currency': 'USD'
           });
         }
-        router.push('/thank-you');
+        // No redirect
       }
     }
     window.addEventListener('message', handleTallySubmit);
