@@ -1,19 +1,22 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export async function POST(req: NextRequest) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = req.body;
     if (!name || !email || !message) {
       console.error('Missing fields:', { name, email, message });
-      return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+      return res.status(400).json({ error: 'Missing fields' });
     }
 
     // Log environment variables (not the password)
     console.log('GMAIL_USER:', process.env.GMAIL_USER);
     if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
       console.error('Missing Gmail credentials in environment variables');
-      return NextResponse.json({ error: 'Server email configuration error' }, { status: 500 });
+      return res.status(500).json({ error: 'Server email configuration error' });
     }
 
     // Create transporter
@@ -29,7 +32,7 @@ export async function POST(req: NextRequest) {
       console.log('Transporter created');
     } catch (err) {
       console.error('Failed to create transporter:', err);
-      return NextResponse.json({ error: 'Failed to set up email transporter' }, { status: 500 });
+      return res.status(500).json({ error: 'Failed to set up email transporter' });
     }
 
     // Email options
@@ -45,13 +48,13 @@ export async function POST(req: NextRequest) {
     try {
       const info = await transporter.sendMail(mailOptions);
       console.log('Email sent:', info.response);
-      return NextResponse.json({ success: true });
+      return res.status(200).json({ success: true });
     } catch (err) {
       console.error('Failed to send email:', err);
-      return NextResponse.json({ error: 'Failed to send email', details: String(err) }, { status: 500 });
+      return res.status(500).json({ error: 'Failed to send email', details: String(err) });
     }
   } catch (error) {
     console.error('Contact API error:', error);
-    return NextResponse.json({ error: 'Failed to process request', details: String(error) }, { status: 500 });
+    return res.status(500).json({ error: 'Failed to process request', details: String(error) });
   }
 } 
