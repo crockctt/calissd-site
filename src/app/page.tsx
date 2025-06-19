@@ -153,9 +153,11 @@ export default function Home() {
                             }, 1200);
                           } else {
                             const data = await res.json();
+                            console.error(data.error || 'Failed to send message.');
                             setContactError(data.error || 'Failed to send message.');
                           }
                         } catch (err) {
+                          console.error(err);
                           setContactError('Failed to send message.');
                         }
                       }}>
