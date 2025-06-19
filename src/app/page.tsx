@@ -24,6 +24,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
   const [contactSuccess, setContactSuccess] = useState(false);
+  const [contactError, setContactError] = useState<string | null>(null);
   const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
   const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
@@ -130,11 +131,39 @@ export default function Home() {
                     {contactSuccess ? (
                       <div className="text-green-700 font-semibold mb-4">Thank you! We received your message.</div>
                     ) : (
-                      <form className="flex flex-col gap-4" onSubmit={e => {e.preventDefault(); setContactSuccess(true); setTimeout(() => { setMenuOpen(false); setContactSuccess(false); router.push('/thank-you'); }, 1200);}}>
+                      <form className="flex flex-col gap-4" onSubmit={async e => {
+                        e.preventDefault();
+                        setContactError(null);
+                        const form = e.currentTarget;
+                        const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+                        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+                        const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+                        try {
+                          const res = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, email, message })
+                          });
+                          if (res.ok) {
+                            setContactSuccess(true);
+                            setTimeout(() => {
+                              setMenuOpen(false);
+                              setContactSuccess(false);
+                              router.push('/thank-you');
+                            }, 1200);
+                          } else {
+                            const data = await res.json();
+                            setContactError(data.error || 'Failed to send message.');
+                          }
+                        } catch (err) {
+                          setContactError('Failed to send message.');
+                        }
+                      }}>
                         <input type="text" name="name" placeholder="Your Name" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
                         <input type="email" name="email" placeholder="Your Email" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
                         <textarea name="message" placeholder="How can we help you?" className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#F7B32B] bg-[#F6F3EE] text-lg" required />
                         <button type="submit" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Send Message</button>
+                        {contactError && <div className="text-red-600 font-semibold mt-2">{contactError}</div>}
                       </form>
                     )}
                     <div className="mt-4 text-[#15304B] text-base">
