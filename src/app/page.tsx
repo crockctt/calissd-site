@@ -146,11 +146,6 @@ export default function Home() {
                           });
                           if (res.ok) {
                             setContactSuccess(true);
-                            setTimeout(() => {
-                              setMenuOpen(false);
-                              setContactSuccess(false);
-                              router.push('/thank-you');
-                            }, 1200);
                           } else {
                             const data = await res.json();
                             console.error(data.error || 'Failed to send message.');
