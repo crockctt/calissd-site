@@ -28,13 +28,13 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon-v2.png" type="image/png" />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17059308391" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17240176145" strategy="afterInteractive" />
         <Script id="google-ads-gtag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17059308391');
+            gtag('config', 'AW-17240176145');
           `}
         </Script>
       </head>
