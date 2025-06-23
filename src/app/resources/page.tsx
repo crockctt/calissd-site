@@ -29,7 +29,7 @@ export default function Resources() {
           </li>
         </ul>
         <div className="flex justify-center">
-          <button className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow-md border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Suggest a Resource</button>
+          <Link href="/contact" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-6 py-3 text-base shadow-md border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Suggest a Resource</Link>
         </div>
       </main>
     </div>
