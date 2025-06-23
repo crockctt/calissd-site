@@ -45,10 +45,13 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div className="flex gap-6 text-lg font-semibold text-[#15304B]">
+        <div className="flex gap-6 text-lg font-semibold text-[#15304B] items-center">
           <a href="#how-it-works" className="hover:text-[#F7B32B] transition">How It Works</a>
+          <span className="h-4 w-px bg-[#F7B32B] mx-2 inline-block"></span>
           <a href="#faq" className="hover:text-[#F7B32B] transition">FAQ</a>
+          <span className="h-4 w-px bg-[#F7B32B] mx-2 inline-block"></span>
           <a href="#resources" className="hover:text-[#F7B32B] transition">Resources</a>
+          <span className="h-4 w-px bg-[#F7B32B] mx-2 inline-block"></span>
           <a href="#contact" className="hover:text-[#F7B32B] transition">Contact</a>
         </div>
       </nav>
