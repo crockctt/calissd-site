@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Script from "next/script";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="flex-1 text-center md:text-left">
             <div className="text-5xl mb-2 text-[#F7B32B] font-extrabold">3</div>
             <h3 className="text-xl font-bold mb-2">Get matched with a lawyer</h3>
-            <p className="text-[#15304B]">We'll connect you with a top California Social Security disability attorney.</p>
+            <p className="text-[#15304B]">We&apos;ll connect you with a top California Social Security disability attorney.</p>
           </div>
           <div className="flex-1 text-center md:text-left">
             <div className="text-5xl mb-2 text-[#F7B32B] font-extrabold">4</div>
