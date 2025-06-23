@@ -175,6 +175,7 @@ export default function Home() {
                   setContactError(data.error || 'Failed to send message.');
                 }
               } catch (err) {
+                console.error(err);
                 setContactError('Failed to send message.');
               }
             }}>
