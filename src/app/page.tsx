@@ -99,10 +99,9 @@ export default function Home() {
             <p className="text-[#15304B]">Your lawyer handles the paperwork and fights for your case.</p>
           </div>
         </div>
-        <div className="flex justify-center">
-          <Link href="/" className="button bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200">Get Started</Link>
-        </div>
       </section>
+      {/* Gradient Transition */}
+      <div className="h-16 bg-gradient-to-b from-white to-[#F6F3EE]"></div>
       {/* Footer */}
       <footer className="text-center text-[#15304B] py-8 text-base bg-[#F6F3EE] border-t-0 mt-auto font-medium tracking-tight">
         <div>About | <Link href="/contact">Contact</Link> | Privacy Policy | Disclaimer</div>
