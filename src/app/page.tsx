@@ -64,10 +64,9 @@ export default function Home() {
       {/* Value Proposition */}
       <section className="py-10 px-4 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-4">CaliSSD makes it easy for Californians to get the Social Security disability benefits and legal help they need.</h2>
-        <p className="text-lg text-[#15304B] mb-4">We connect you with experienced attorneys who fight for your rights—no upfront cost, no obligation.</p>
+        <p className="text-lg text-[#15304B] mb-4">We connect you with experienced attorneys—no upfront cost, no obligation.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <span className="bg-[#F7B32B]/20 text-[#15304B] rounded-full px-6 py-2 font-semibold">Free consultation</span>
-          <span className="bg-[#F7B32B]/20 text-[#15304B] rounded-full px-6 py-2 font-semibold">No payment unless you win</span>
           <span className="bg-[#F7B32B]/20 text-[#15304B] rounded-full px-6 py-2 font-semibold">Confidential and compassionate support</span>
         </div>
       </section>
