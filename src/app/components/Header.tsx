@@ -21,8 +21,10 @@ export default function Header() {
           <Link href="/">
             <Image src="/Calissdlogo.PNG" alt="CaliSSD Logo" width={56} height={56} className="w-14 h-14 rounded-lg border border-[#F7B32B]/60 bg-white shadow-sm" />
           </Link>
-          <span className="hidden sm:block text-2xl font-bold text-[#15304B] tracking-tight whitespace-nowrap" style={{ fontFamily: 'Playfair Display, serif' }}>
-            California SSD
+          <span className="hidden sm:block text-2xl font-bold text-[#15304B] tracking-tight whitespace-pre leading-tight text-left" style={{ fontFamily: 'Playfair Display, serif' }}>
+            California Social
+            <br />
+            Security Disability
           </span>
         </div>
         {/* Desktop Nav */}
