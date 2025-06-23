@@ -191,3 +191,56 @@ body::before {
 .animate-fade-in {
   animation: fade-in-up 1.2s cubic-bezier(0.4,0,0.2,1) both;
 }
+
+/* FAQ accordion and menu styles */
+.menu-modal {
+  z-index: 1000;
+}
+.menu-modal .heading-display {
+  margin-bottom: 0.5rem;
+}
+.menu-modal .faq-accordion button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  width: 100%;
+  text-align: left;
+  color: #15304B;
+  transition: background 0.2s;
+}
+.menu-modal .faq-accordion button:focus {
+  outline: 2px solid #F7B32B;
+}
+.menu-modal .faq-accordion .faq-panel {
+  padding-left: 0.5rem;
+  color: #15304B;
+  font-size: 1rem;
+  transition: max-height 0.3s, padding 0.3s;
+}
+.menu-modal .faq-accordion .faq-panel[aria-hidden="true"] {
+  max-height: 0;
+  padding: 0;
+}
+.menu-modal .faq-accordion .faq-panel[aria-hidden="false"] {
+  max-height: 200px;
+  padding: 0.5rem 0;
+}
+.menu-modal input, .menu-modal textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.menu-modal .button {
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .menu-modal {
+    max-width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    right: 0;
+    left: 0;
+  }
+}
