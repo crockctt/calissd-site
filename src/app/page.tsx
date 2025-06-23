@@ -11,22 +11,8 @@ declare global {
   }
 }
 
-const FAQS = [
-  {q: "Who will contact me after I submit the form?", a: "A qualified California disability attorney will reach out to you for your free consultation."},
-  {q: "Is my information confidential?", a: "Yes, your information is 100% confidential and only shared with a trusted attorney."},
-  {q: "How much does the consultation cost?", a: "The consultation is completely free and there is no obligation to proceed."},
-  {q: "How fast will I get a response?", a: "Most people receive a response within 24 hours."},
-];
-
 export default function Home() {
-  const surveyRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [faqOpen, setFaqOpen] = useState<number | null>(null);
-  const [contactSuccess, setContactSuccess] = useState(false);
-  const [contactError, setContactError] = useState<string | null>(null);
-  const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
-  const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
   useEffect(() => {
     function handleTallySubmit(e: MessageEvent) {
@@ -133,7 +119,7 @@ export default function Home() {
       <section id="resources" className="py-12 px-4 bg-white border-t border-[#F7B32B]/40 max-w-4xl mx-auto">
         <h2 className="text-3xl font-extrabold text-[#15304B] mb-8 text-center">Resource Center</h2>
         <ul className="space-y-4 text-lg">
-          <li><a href="#" className="text-[#15304B] underline hover:text-[#F7B32B]">SSI vs. SSDI: What's the difference?</a></li>
+          <li><a href="#" className="text-[#15304B] underline hover:text-[#F7B32B]">SSI vs. SSDI: What&apos;s the difference?</a></li>
           <li><a href="#" className="text-[#15304B] underline hover:text-[#F7B32B]">How to apply for Social Security disability in California</a></li>
           <li><a href="#" className="text-[#15304B] underline hover:text-[#F7B32B]">What to expect from the process</a></li>
         </ul>
