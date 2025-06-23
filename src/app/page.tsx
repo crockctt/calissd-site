@@ -57,7 +57,17 @@ export default function Home() {
         <h1 className="text-4xl sm:text-6xl font-extrabold text-[#15304B] mb-4 text-center drop-shadow-xl">Get the Benefits You Deserve.</h1>
         <p className="text-xl sm:text-2xl text-[#15304B] mb-8 text-center max-w-2xl">Connect instantly with a top California Social Security disability attorney. Fast, free, and confidential.</p>
         <div className="flex gap-4">
-          <a href="#qualify" className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg hover:bg-[#FFD369] transition">See if You Qualify</a>
+          <button
+            className="tally-open bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg hover:bg-[#FFD369] transition"
+            data-tally-open="mZg1Oe"
+            data-tally-layout="modal"
+            data-tally-width="600"
+            data-tally-auto-close="true"
+            data-tally-overlay="rgba(21,48,75,0.7)"
+            style={{ cursor: 'pointer' }}
+          >
+            See if You Qualify
+          </button>
           <a href="#how-it-works" className="bg-white text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border border-[#F7B32B] hover:bg-[#F7B32B]/20 transition">How It Works</a>
         </div>
       </section>
@@ -125,9 +135,18 @@ export default function Home() {
       </section>
       {/* Footer */}
       <footer className="text-center text-[#15304B] py-8 text-base bg-[#F6F3EE] border-t-0 mt-auto font-medium tracking-tight">
-        <div>About | Contact | Privacy Policy | Disclaimer</div>
+        <div>About | <a id="contact" href="#contact-section">Contact</a> | Privacy Policy | Disclaimer</div>
         <div className="mt-2">&copy; {new Date().getFullYear()} CaliSSD. All rights reserved.</div>
       </footer>
+      {/* Contact Section */}
+      <section id="contact-section" className="py-12 px-4 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-[#15304B] mb-6 text-center">Contact Us</h2>
+        <div className="text-lg text-[#15304B] text-center mb-4">Have questions? Reach out and we&apos;ll get back to you soon.</div>
+        <div className="flex flex-col items-center gap-2">
+          <div>Email: <a href="mailto:calileads11@gmail.com" className="underline text-[#F7B32B]">calileads11@gmail.com</a></div>
+          <div>Phone: <a href="tel:6519648710" className="underline text-[#F7B32B]">651-964-8710</a></div>
+        </div>
+      </section>
     </div>
   );
 }
