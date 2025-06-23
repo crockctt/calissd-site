@@ -29,7 +29,7 @@ export default function Header() {
           </span>
         </div>
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 items-center ml-8 flex-1">
+        <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link, index) => (
             <React.Fragment key={link.href}>
               <Link
