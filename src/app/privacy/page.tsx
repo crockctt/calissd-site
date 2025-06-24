@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
           </div>
           <div>
             <h2 className="font-bold text-lg mb-2">Contact</h2>
-            <p>For privacy questions, email us at <a href="mailto:info@calissd.com" className="underline hover:text-[#F7B32B]">info@calissd.com</a>.</p>
+            <p>For privacy questions, email us at <a href="mailto:calileads11@gmail.com" className="underline hover:text-[#F7B32B]">calileads11@gmail.com</a>.</p>
           </div>
           <div>
             <h2 className="font-bold text-lg mb-2">Updates</h2>
