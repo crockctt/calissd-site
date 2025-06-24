@@ -33,6 +33,7 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="font-bold text-lg mb-2">Information Sharing</h2>
             <ul className="list-disc ml-6">
+              <li>We do not sell your information.</li>
               <li>We may share your information with attorney partners for the purpose of providing legal services.</li>
               <li>We may disclose information if required by law.</li>
             </ul>
