@@ -21,7 +21,7 @@ export default function FAQPage() {
           </div>
           <div>
             <h2 className="font-bold mb-2">What happens after I fill out the form?</h2>
-            <p>A real advocate will reach out to discuss your situation and next steps. If you qualify, we'll connect you with an experienced California Social Security disability attorney.</p>
+            <p>A real advocate will reach out to discuss your situation and next steps. If you qualify, we&apos;ll connect you with an experienced California Social Security disability attorney.</p>
           </div>
           <div>
             <h2 className="font-bold mb-2">Is CaliSSD a law firm?</h2>
@@ -29,7 +29,7 @@ export default function FAQPage() {
           </div>
           <div>
             <h2 className="font-bold mb-2">Who will contact me?</h2>
-            <p>You'll be contacted by a knowledgeable advocate or a qualified attorney partner who specializes in Social Security disability cases.</p>
+            <p>You&apos;ll be contacted by a knowledgeable advocate or a qualified attorney partner who specializes in Social Security disability cases.</p>
           </div>
           <div>
             <h2 className="font-bold mb-2">What information do I need to provide?</h2>
@@ -40,8 +40,8 @@ export default function FAQPage() {
             <p>Response times vary, but we aim to connect you with an attorney within 24 hours.</p>
           </div>
           <div>
-            <h2 className="font-bold mb-2">What if I'm denied benefits?</h2>
-            <p>If you're denied, your attorney can help you appeal the decision and guide you through the next steps.</p>
+            <h2 className="font-bold mb-2">What if I&apos;m denied benefits?</h2>
+            <p>If you&apos;re denied, your attorney can help you appeal the decision and guide you through the next steps.</p>
           </div>
           <div>
             <h2 className="font-bold mb-2">Is my information secure?</h2>
