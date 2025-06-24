@@ -14,30 +14,38 @@ export default function FAQPage() {
           <span className="font-medium">Back to Home</span>
         </Link>
         <h1 className="text-3xl font-extrabold text-[#15304B] mb-8 text-center">Frequently Asked Questions</h1>
-        <div className="space-y-6 mb-10">
+        <div className="space-y-8 text-[#15304B] text-lg">
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">How much does CaliSSD charge?</h2>
-            <p className="text-[#15304B]">We offer free consultations. If you hire a lawyer, you pay nothing up front and nothing unless you win.</p>
+            <h2 className="font-bold mb-2">How much does CaliSSD charge?</h2>
+            <p>We offer free consultations. If you hire a lawyer, you pay nothing up front and nothing unless you win your case.</p>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">What happens after I fill out the form?</h2>
-            <p className="text-[#15304B]">A real advocate will reach out to discuss your situation and next steps.</p>
+            <h2 className="font-bold mb-2">What happens after I fill out the form?</h2>
+            <p>A real advocate will reach out to discuss your situation and next steps. If you qualify, we'll connect you with an experienced California Social Security disability attorney.</p>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">Is CaliSSD a law firm?</h2>
-            <p className="text-[#15304B]">CaliSSD connects you with experienced California Social Security disability attorneys.</p>
+            <h2 className="font-bold mb-2">Is CaliSSD a law firm?</h2>
+            <p>No, CaliSSD is not a law firm. We connect you with experienced California Social Security disability attorneys.</p>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">Do I need to pay for a consultation?</h2>
-            <p className="text-[#15304B]">No, consultations are always free and confidential.</p>
+            <h2 className="font-bold mb-2">Who will contact me?</h2>
+            <p>You'll be contacted by a knowledgeable advocate or a qualified attorney partner who specializes in Social Security disability cases.</p>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">What if I&apos;ve already been denied benefits?</h2>
-            <p className="text-[#15304B]">You may still qualify. Our network attorneys can help you appeal and fight for your benefits.</p>
+            <h2 className="font-bold mb-2">What information do I need to provide?</h2>
+            <p>Basic contact information and a brief description of your situation. All information is kept confidential.</p>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#15304B]">How long does the process take?</h2>
-            <p className="text-[#15304B]">Every case is different, but we&apos;ll help you get started quickly and keep you informed at every step.</p>
+            <h2 className="font-bold mb-2">How long does the process take?</h2>
+            <p>Response times vary, but we aim to connect you with an attorney within 24 hours.</p>
+          </div>
+          <div>
+            <h2 className="font-bold mb-2">What if I'm denied benefits?</h2>
+            <p>If you're denied, your attorney can help you appeal the decision and guide you through the next steps.</p>
+          </div>
+          <div>
+            <h2 className="font-bold mb-2">Is my information secure?</h2>
+            <p>Yes. We use industry-standard security measures to protect your data and only share it with attorney partners as needed.</p>
           </div>
         </div>
         <div className="bg-[#F7B32B]/10 rounded-xl p-6 text-center">
