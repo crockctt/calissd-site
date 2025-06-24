@@ -104,7 +104,7 @@ export default function Home() {
       <div className="h-16 bg-gradient-to-b from-white to-[#F6F3EE]"></div>
       {/* Footer */}
       <footer className="text-center text-[#15304B] py-8 text-base bg-[#F6F3EE] border-t-0 mt-auto font-medium tracking-tight">
-        <div>About | <Link href="/contact">Contact</Link> | Privacy Policy | Disclaimer</div>
+        <div>About | <Link href="/contact">Contact</Link> | <Link href="/privacy">Privacy Policy</Link> | <Link href="/disclaimer">Disclaimer</Link></div>
         <div className="mt-2">&copy; {new Date().getFullYear()} CaliSSD. All rights reserved.</div>
       </footer>
     </div>
