@@ -37,6 +37,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-PTPLFZNX4D');
             gtag('config', 'AW-17240176145');
+            console.log('🔧 GA4 Script loaded and configured for G-PTPLFZNX4D');
           `}
         </Script>
       </head>
