@@ -32,6 +32,31 @@ export default function Home() {
     return () => window.removeEventListener('message', handleTallySubmit);
   }, [router]);
 
+  // Debug Google Analytics
+  useEffect(() => {
+    // Check if gtag is loaded
+    if (typeof window !== 'undefined') {
+      console.log('Checking Google Analytics...');
+      
+      // Wait a bit for gtag to load
+      setTimeout(() => {
+        if (window.gtag) {
+          console.log('✅ Google Analytics gtag is loaded!');
+          
+          // Send a test event
+          window.gtag('event', 'page_view', {
+            page_title: 'Homepage',
+            page_location: window.location.href
+          });
+          
+          console.log('✅ Test page_view event sent to GA4');
+        } else {
+          console.log('❌ Google Analytics gtag is NOT loaded');
+        }
+      }, 2000);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen home-bg flex flex-col relative font-sans">
       <Header />
