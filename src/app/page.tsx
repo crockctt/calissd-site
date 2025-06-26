@@ -9,6 +9,7 @@ import Header from "./components/Header";
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    dataLayer?: any[];
   }
 }
 
@@ -36,24 +37,80 @@ export default function Home() {
   useEffect(() => {
     // Check if gtag is loaded
     if (typeof window !== 'undefined') {
-      console.log('Checking Google Analytics...');
+      console.log('🔍 Checking Google Analytics...');
       
-      // Wait a bit for gtag to load
-      setTimeout(() => {
-        if (window.gtag) {
-          console.log('✅ Google Analytics gtag is loaded!');
-          
-          // Send a test event
-          window.gtag('event', 'page_view', {
-            page_title: 'Homepage',
-            page_location: window.location.href
-          });
-          
-          console.log('✅ Test page_view event sent to GA4');
+      // Check immediately
+      if (window.gtag) {
+        console.log('✅ Google Analytics gtag is already loaded!');
+        sendTestEvent();
+      } else {
+        console.log('⏳ gtag not loaded yet, waiting...');
+        
+        // Check multiple times with increasing delays
+        const checkGtag = (attempt: number) => {
+          setTimeout(() => {
+            if (window.gtag) {
+              console.log(`✅ Google Analytics gtag loaded on attempt ${attempt}!`);
+              sendTestEvent();
+            } else if (attempt < 5) {
+              console.log(`⏳ Attempt ${attempt}: gtag still not loaded, retrying...`);
+              checkGtag(attempt + 1);
+            } else {
+              console.log('❌ Google Analytics gtag failed to load after 5 attempts');
+              console.log('🔍 Checking for potential issues:');
+              console.log('- Ad blocker might be active');
+              console.log('- Network connectivity issues');
+              console.log('- Script loading order problems');
+              
+              // Check if the script tag exists in DOM
+              const scriptTags = document.querySelectorAll('script[src*="googletagmanager"]');
+              console.log(`📜 Found ${scriptTags.length} Google Tag Manager script tags`);
+              
+              // Check for network errors
+              const networkErrors = performance.getEntriesByType('resource')
+                .filter((entry: any) => entry.name.includes('googletagmanager') && entry.duration === 0);
+              if (networkErrors.length > 0) {
+                console.log('❌ Network errors detected for Google Tag Manager');
+              }
+            }
+          }, attempt * 1000); // 1s, 2s, 3s, 4s, 5s
+        };
+        
+        checkGtag(1);
+      }
+    }
+    
+    function sendTestEvent() {
+      try {
+        // Send a test page_view event
+        window.gtag!('event', 'page_view', {
+          page_title: 'Homepage',
+          page_location: window.location.href,
+          custom_parameter: 'debug_test'
+        });
+        
+        console.log('✅ Test page_view event sent to GA4');
+        
+        // Also send a custom debug event
+        window.gtag!('event', 'debug_test', {
+          event_category: 'debug',
+          event_label: 'homepage_load',
+          value: 1
+        });
+        
+        console.log('✅ Debug test event sent to GA4');
+        
+        // Check if dataLayer is working
+        if (window.dataLayer) {
+          console.log('✅ dataLayer is available');
+          console.log('📊 Current dataLayer:', window.dataLayer);
         } else {
-          console.log('❌ Google Analytics gtag is NOT loaded');
+          console.log('❌ dataLayer is not available');
         }
-      }, 2000);
+        
+      } catch (error) {
+        console.error('❌ Error sending test event:', error);
+      }
     }
   }, []);
 
