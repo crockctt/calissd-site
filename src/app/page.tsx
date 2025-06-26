@@ -9,7 +9,7 @@ import Header from "./components/Header";
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
-    dataLayer?: any[];
+    dataLayer?: unknown[];
   }
 }
 
@@ -38,6 +38,8 @@ export default function Home() {
     // Check if gtag is loaded
     if (typeof window !== 'undefined') {
       console.log('🔍 Checking Google Analytics...');
+      console.log('📍 Current URL:', window.location.href);
+      console.log('📱 User Agent:', navigator.userAgent);
       
       // Check immediately
       if (window.gtag) {
@@ -68,10 +70,15 @@ export default function Home() {
               
               // Check for network errors
               const networkErrors = performance.getEntriesByType('resource')
-                .filter((entry: any) => entry.name.includes('googletagmanager') && entry.duration === 0);
+                .filter((entry: PerformanceEntry) => entry.name.includes('googletagmanager') && entry.duration === 0);
               if (networkErrors.length > 0) {
                 console.log('❌ Network errors detected for Google Tag Manager');
               }
+              
+              // Try to manually trigger a network request to test connectivity
+              fetch('https://www.googletagmanager.com/gtag/js?id=G-PTPLFZNX4D', { method: 'HEAD' })
+                .then(() => console.log('✅ Network connectivity to Google Tag Manager is working'))
+                .catch(() => console.log('❌ Network connectivity to Google Tag Manager failed'));
             }
           }, attempt * 1000); // 1s, 2s, 3s, 4s, 5s
         };
@@ -104,9 +111,28 @@ export default function Home() {
         if (window.dataLayer) {
           console.log('✅ dataLayer is available');
           console.log('📊 Current dataLayer:', window.dataLayer);
+          
+          // Check if the dataLayer contains our events
+          const hasPageView = window.dataLayer.some((item: unknown) => 
+            (item as { event?: string }).event === 'page_view' || 
+            (Array.isArray(item) && item[0] === 'event' && item[1] === 'page_view')
+          );
+          console.log('📊 dataLayer contains page_view event:', hasPageView);
         } else {
           console.log('❌ dataLayer is not available');
         }
+        
+        // Test network request to Google Analytics
+        setTimeout(() => {
+          const analyticsRequests = performance.getEntriesByType('resource')
+            .filter((entry: PerformanceEntry) => entry.name.includes('google-analytics.com'));
+          console.log('🌐 Google Analytics network requests:', analyticsRequests.length);
+          if (analyticsRequests.length > 0) {
+            console.log('✅ Google Analytics network requests detected');
+          } else {
+            console.log('❌ No Google Analytics network requests detected');
+          }
+        }, 2000);
         
       } catch (error) {
         console.error('❌ Error sending test event:', error);
