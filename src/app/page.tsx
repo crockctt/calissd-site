@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useEffect } from "react";
 import Script from "next/script";
@@ -221,5 +222,3 @@ export default function Home() {
     </div>
   );
 }
-
-/* eslint-disable react/no-unescaped-entities */
