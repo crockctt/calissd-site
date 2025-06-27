@@ -149,23 +149,20 @@ export default function Home() {
       {/* Hero Section - Purpose Driven */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
         <h1 className="text-5xl sm:text-7xl font-extrabold text-[#15304B] mb-6 max-w-3xl leading-tight drop-shadow-lg">
-          <span className="block text-[#F7B32B]">Struggling With Disability Benefits?</span>
-          <span className="block text-[#15304B]">We&#39;re On Your Side.</span>
+          <span className="block">Get Your Disability Benefits.</span>
+          <span className="block">Start Your Free Evaluation Now.</span>
         </h1>
-        <p className="text-base sm:text-lg text-[#4B5A6A] mb-6 max-w-xl">
-          Fast, free help from real California advocates. No cost. No obligation.
+        <p className="text-lg text-[#4B5A6A] mb-6 max-w-xl font-medium">
+          Fast. Free. 100% Confidential.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
           <button
-            className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200 mb-2 sm:mb-0"
+            className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-10 py-5 text-xl shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200 mb-2 sm:mb-0"
             style={{ cursor: 'pointer' }}
             onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
           >
-            Get My Free Disability Evaluation
+            Start My Free Disability Survey
           </button>
-        </div>
-        <div className="mt-4 text-[#4B5A6A] text-base font-medium">
-          100% confidential. Takes 60 seconds. You pay nothing unless you win.
         </div>
       </section>
       {/* Value Proposition */}
