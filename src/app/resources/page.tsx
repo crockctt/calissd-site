@@ -23,7 +23,7 @@ export default function Resources() {
               <ul className="space-y-3 text-base">
                 <li>
                   <Link href="/resources/ssi-vs-ssdi" className="text-[#15304B] underline hover:text-[#F7B32B] font-semibold">
-                    SSI vs. SSDI: What's the difference?
+                    SSI vs. SSDI: What&apos;s the difference?
                   </Link>
                   <div className="text-[#4B5A6A] text-sm mt-1">Learn the key differences between Supplemental Security Income (SSI) and Social Security Disability Insurance (SSDI) in California.</div>
                 </li>
