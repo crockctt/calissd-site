@@ -148,12 +148,12 @@ export default function Home() {
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Hero Section - Purpose Driven */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-5xl sm:text-7xl font-extrabold text-[#15304B] mb-6 max-w-3xl leading-tight drop-shadow-lg">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-[#15304B] mb-3 max-w-xl leading-tight drop-shadow-lg">
           <span className="block text-[#F7B32B]">Struggling With Disability Benefits?</span>
-          <span className="block text-[#15304B]">We{"'"}ll Fight For You—Every Step of the Way.</span>
+          <span className="block text-[#15304B]">We&#39;re On Your Side.</span>
         </h1>
-        <p className="text-xl sm:text-2xl text-[#4B5A6A] mb-8 max-w-2xl">
-          Don{"'"}t let paperwork or denials stand in your way. Our California-based advocates make the process simple, fast, and stress-free—so you can focus on your health, not the system. <span className="font-semibold text-[#15304B]">No cost. No obligation. Just real help.</span>
+        <p className="text-base sm:text-lg text-[#4B5A6A] mb-6 max-w-xl">
+          Fast, free help from real California advocates. No cost. No obligation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
           <button
