@@ -148,7 +148,7 @@ export default function Home() {
       {/* Hero Section - Purpose Driven */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#15304B] mb-4 max-w-2xl">
-          You Deserve Support.<br />We're Here Because We Care.
+          You Deserve Support.<br />We&apos;re Here Because We Care.
         </h1>
         <p className="text-lg sm:text-xl text-[#4B5A6A] mb-8 max-w-2xl">
           At CaliSSD, we believe that no one should have to face the Social Security system alone. Our purpose is simple: <span className="font-semibold text-[#15304B]">to help you reclaim your dignity, security, and peace of mind</span>—quickly, compassionately, and at no cost to you. We do this because we care about your story, your future, and your right to support.
