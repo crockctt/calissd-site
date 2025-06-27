@@ -159,7 +159,7 @@ export default function Home() {
             data-tally-overlay="rgba(21,48,75,0.7)"
             style={{ cursor: 'pointer' }}
           >
-            See if You Qualify
+            Check Your Eligibility in 60 Seconds
           </button>
           <Link href="/how-it-works" className="bg-white text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border border-[#F7B32B] hover:bg-[#F7B32B]/20 transition">How It Works</Link>
         </div>
