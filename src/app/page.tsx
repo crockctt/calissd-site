@@ -145,23 +145,25 @@ export default function Home() {
       <Header />
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[50vh] py-12 sm:py-20 bg-gradient-to-tr from-[#F7B32B]/20 via-[#F6F3EE] to-[#15304B]/10">
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-[#15304B] mb-4 text-center drop-shadow-xl">Get the Benefits You Deserve.</h1>
-        <p className="text-xl sm:text-2xl text-[#15304B] mb-8 text-center max-w-2xl">Connect instantly with a top California Social Security disability attorney. Fast, free, and confidential.</p>
-        <div className="flex gap-4">
+      {/* Hero Section - Purpose Driven */}
+      <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#15304B] mb-4 max-w-2xl">
+          You Deserve Support.<br />We're Here Because We Care.
+        </h1>
+        <p className="text-lg sm:text-xl text-[#4B5A6A] mb-8 max-w-2xl">
+          At CaliSSD, we believe that no one should have to face the Social Security system alone. Our purpose is simple: <span className="font-semibold text-[#15304B]">to help you reclaim your dignity, security, and peace of mind</span>—quickly, compassionately, and at no cost to you. We do this because we care about your story, your future, and your right to support.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
           <button
-            className="tally-open bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg hover:bg-[#FFD369] transition"
-            data-tally-open="mZg1Oe"
-            data-tally-layout="modal"
-            data-tally-width="600"
-            data-tally-auto-close="true"
-            data-tally-overlay="rgba(21,48,75,0.7)"
+            className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200 mb-2 sm:mb-0"
             style={{ cursor: 'pointer' }}
+            onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
           >
-            See if You Qualify
+            See If We Can Help You Today
           </button>
-          <Link href="/how-it-works" className="bg-white text-[#15304B] font-bold rounded-full px-8 py-4 text-lg shadow-lg border border-[#F7B32B] hover:bg-[#F7B32B]/20 transition">How It Works</Link>
+        </div>
+        <div className="mt-4 text-[#4B5A6A] text-base font-medium">
+          100% free. No obligation. Real people, real help.
         </div>
       </section>
       {/* Value Proposition */}
