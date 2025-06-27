@@ -149,10 +149,10 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
         <h1 className="text-5xl sm:text-7xl font-extrabold text-[#15304B] mb-6 max-w-3xl leading-tight drop-shadow-lg">
           <span className="block text-[#F7B32B]">Struggling With Disability Benefits?</span>
-          <span className="block text-[#15304B]">We'll Fight For You—Every Step of the Way.</span>
+          <span className="block text-[#15304B]">We&apos;ll Fight For You—Every Step of the Way.</span>
         </h1>
         <p className="text-xl sm:text-2xl text-[#4B5A6A] mb-8 max-w-2xl">
-          Don't let paperwork or denials stand in your way. Our California-based advocates make the process simple, fast, and stress-free—so you can focus on your health, not the system. <span className="font-semibold text-[#15304B]">No cost. No obligation. Just real help.</span>
+          Don&apos;t let paperwork or denials stand in your way. Our California-based advocates make the process simple, fast, and stress-free—so you can focus on your health, not the system. <span className="font-semibold text-[#15304B]">No cost. No obligation. Just real help.</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
           <button
@@ -199,7 +199,7 @@ export default function Home() {
             {/* Icon 3 */}
             <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <h3 className="text-xl font-bold mb-2">3. Get matched with a lawyer</h3>
-            <p className="text-[#15304B]">We'll connect you with a top Social Security disability attorney.</p>
+            <p className="text-[#15304B]">We&apos;ll connect you with a top Social Security disability attorney.</p>
           </div>
           <div className="flex-1 icon-card items-center">
             {/* Icon 4 - simple checkmark SVG */}
