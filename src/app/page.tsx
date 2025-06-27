@@ -147,11 +147,12 @@ export default function Home() {
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Hero Section - Purpose Driven */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#15304B] mb-4 max-w-2xl">
-          You Deserve Support.<br />We&apos;re Here Because We Care.
+        <h1 className="text-5xl sm:text-7xl font-extrabold text-[#15304B] mb-6 max-w-3xl leading-tight drop-shadow-lg">
+          <span className="block text-[#F7B32B]">Struggling With Disability Benefits?</span>
+          <span className="block text-[#15304B]">We'll Fight For You—Every Step of the Way.</span>
         </h1>
-        <p className="text-lg sm:text-xl text-[#4B5A6A] mb-8 max-w-2xl">
-          At CaliSSD, we believe that no one should have to face the Social Security system alone. Our purpose is simple: <span className="font-semibold text-[#15304B]">to help you reclaim your dignity, security, and peace of mind</span>—quickly, compassionately, and at no cost to you. We do this because we care about your story, your future, and your right to support.
+        <p className="text-xl sm:text-2xl text-[#4B5A6A] mb-8 max-w-2xl">
+          Don't let paperwork or denials stand in your way. Our California-based advocates make the process simple, fast, and stress-free—so you can focus on your health, not the system. <span className="font-semibold text-[#15304B]">No cost. No obligation. Just real help.</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
           <button
@@ -159,11 +160,11 @@ export default function Home() {
             style={{ cursor: 'pointer' }}
             onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
           >
-            See If We Can Help You Today
+            Get My Free Disability Evaluation
           </button>
         </div>
         <div className="mt-4 text-[#4B5A6A] text-base font-medium">
-          100% free. No obligation. Real people, real help.
+          100% confidential. Takes 60 seconds. You pay nothing unless you win.
         </div>
       </section>
       {/* Value Proposition */}
@@ -178,7 +179,7 @@ export default function Home() {
       {/* How It Works (duplicated from /how-it-works) */}
       <section className="py-12 px-4 bg-white border-t border-[#F7B32B]/40">
         <h2 className="text-3xl font-extrabold text-[#15304B] mb-4 text-center">How It Works</h2>
-        <p className="text-lg text-[#4B5A6A] mb-10 text-center max-w-2xl mx-auto">CaliSSD makes it simple to get the Social Security disability benefits you deserve. Here&apos;s how our process works, step by step.</p>
+        <p className="text-lg text-[#4B5A6A] mb-10 text-center max-w-2xl mx-auto">CaliSSD makes it simple to get the Social Security disability benefits you deserve. Here's how our process works, step by step.</p>
         <div className="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto mb-12">
           <div className="flex-1 icon-card items-center">
             {/* Icon 1 - plain clipboard SVG (no checkmark) */}
@@ -198,7 +199,7 @@ export default function Home() {
             {/* Icon 3 */}
             <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <h3 className="text-xl font-bold mb-2">3. Get matched with a lawyer</h3>
-            <p className="text-[#15304B]">We&apos;ll connect you with a top Social Security disability attorney.</p>
+            <p className="text-[#15304B]">We'll connect you with a top Social Security disability attorney.</p>
           </div>
           <div className="flex-1 icon-card items-center">
             {/* Icon 4 - simple checkmark SVG */}
