@@ -148,9 +148,9 @@ export default function Home() {
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       {/* Hero Section - Purpose Driven */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-[#15304B] mb-5 max-w-2xl leading-tight drop-shadow-lg">
-          <span className="block">Get Your Disability Benefits.</span>
-          <span className="block">Start Your Free Evaluation Now.</span>
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-6 max-w-3xl leading-tight drop-shadow-lg">
+          Get Your Disability Benefits.<br />
+          Start Your Free Evaluation Now.
         </h1>
         <p className="text-lg text-[#4B5A6A] mb-6 max-w-xl font-medium">
           Fast. Free. 100% Confidential.
