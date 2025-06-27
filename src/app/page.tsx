@@ -207,7 +207,7 @@ export default function Home() {
               <path d="M6 12l5 5 7-7" stroke="#F7B32B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
             <h3 className="text-xl font-bold mb-2">4. Get your benefits</h3>
-            <p className="text-[#15304B]">Your lawyer handles the paperwork and fight&apos;s for your case.</p>
+            <p className="text-[#15304B]">Your lawyer handles the paperwork and fights for your case.</p>
           </div>
         </div>
       </section>
