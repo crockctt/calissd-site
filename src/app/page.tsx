@@ -199,7 +199,6 @@ export default function Home() {
             {/* Icon 3 */}
             <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <h3 className="text-xl font-bold mb-2">3. Get matched with a lawyer</h3>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <p className="text-[#15304B]">We'll connect you with a top Social Security disability attorney.</p>
           </div>
           <div className="flex-1 icon-card items-center">
@@ -222,3 +221,5 @@ export default function Home() {
     </div>
   );
 }
+
+/* eslint-disable react/no-unescaped-entities */
