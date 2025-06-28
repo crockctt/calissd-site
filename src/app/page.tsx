@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import Script from "next/script";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "./components/Header";
@@ -10,7 +9,9 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
-    Tally?: any;
+    Tally?: {
+      openPopup: (formId: string) => void;
+    };
   }
 }
 
