@@ -166,16 +166,6 @@ export default function Home() {
           data-tally-overlay="true"
           data-tally-close-on-escape="true"
           data-tally-close-on-overlay-click="true"
-          onClick={() => {
-            console.log('Tally button clicked');
-            console.log('Tally script loaded:', typeof window !== 'undefined' && window.Tally);
-            // Fallback to direct link if data attributes don't work
-            setTimeout(() => {
-              if (typeof window !== 'undefined' && window.Tally) {
-                window.Tally.openPopup('mZg1Oe');
-              }
-            }, 100);
-          }}
         >
           Start Free Evaluation Now
         </button>
@@ -256,14 +246,6 @@ export default function Home() {
             data-tally-overlay="true"
             data-tally-close-on-escape="true"
             data-tally-close-on-overlay-click="true"
-            onClick={() => {
-              console.log('Secondary Tally button clicked');
-              setTimeout(() => {
-                if (typeof window !== 'undefined' && window.Tally) {
-                  window.Tally.openPopup('mZg1Oe');
-                }
-              }, 100);
-            }}
           >
             Check My Eligibility Now
           </button>
