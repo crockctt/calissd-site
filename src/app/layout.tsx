@@ -40,6 +40,8 @@ export default function RootLayout({
             console.log('🔧 GA4 Script loaded and configured for G-PTPLFZNX4D');
           `}
         </Script>
+        {/* Tally Script */}
+        <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
         {/* Microsoft Clarity */}
         <script type="text/javascript" dangerouslySetInnerHTML={{
           __html: `

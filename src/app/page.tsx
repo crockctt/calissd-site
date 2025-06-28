@@ -10,6 +10,7 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
+    Tally?: any;
   }
 }
 
@@ -143,8 +144,6 @@ export default function Home() {
   return (
     <div className="min-h-screen home-bg flex flex-col relative font-sans">
       <Header />
-      {/* Tally Popup Script */}
-      <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       
       {/* Hero Section - Conversion Focused */}
       <section className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4 pt-16 pb-20 bg-gradient-to-b from-[#F6F3EE] to-white">
@@ -166,6 +165,12 @@ export default function Home() {
           data-tally-overlay="true"
           data-tally-close-on-escape="true"
           data-tally-close-on-overlay-click="true"
+          onClick={() => {
+            // Fallback method if data attributes don't work
+            if (typeof window !== 'undefined' && window.Tally) {
+              window.Tally.openPopup('mO5W8L');
+            }
+          }}
         >
           Start Free Evaluation Now
         </button>
