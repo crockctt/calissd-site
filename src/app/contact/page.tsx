@@ -26,7 +26,7 @@ export default function ContactPage() {
           <button
             className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200"
             style={{ cursor: 'pointer' }}
-            data-tally-open="mO5W8L"
+            data-tally-open="mZg1Oe"
             data-tally-layout="modal"
             data-tally-width="700"
             data-tally-emoji-text="📋"
@@ -95,7 +95,7 @@ export default function ContactPage() {
           <button
             className="bg-[#15304B] text-white font-bold rounded-full px-8 py-3 text-lg shadow-md border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
-            data-tally-open="mO5W8L"
+            data-tally-open="mZg1Oe"
             data-tally-layout="modal"
             data-tally-width="700"
             data-tally-emoji-text="📋"

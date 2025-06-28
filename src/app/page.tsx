@@ -156,7 +156,7 @@ export default function Home() {
         <button
           className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-12"
           style={{ cursor: 'pointer' }}
-          data-tally-open="mO5W8L"
+          data-tally-open="mZg1Oe"
           data-tally-layout="modal"
           data-tally-width="700"
           data-tally-emoji-text="📋"
@@ -172,35 +172,13 @@ export default function Home() {
             // Fallback to direct link if data attributes don't work
             setTimeout(() => {
               if (typeof window !== 'undefined' && window.Tally) {
-                window.Tally.openPopup('mO5W8L');
+                window.Tally.openPopup('mZg1Oe');
               }
             }, 100);
           }}
         >
           Start Free Evaluation Now
         </button>
-        
-        {/* Trust Signals */}
-        <div className="flex flex-col sm:flex-row gap-8 text-sm text-[#4B5A6A] font-medium">
-          <div className="flex items-center gap-3">
-            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            100% Free & Confidential
-          </div>
-          <div className="flex items-center gap-3">
-            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            California Attorneys
-          </div>
-          <div className="flex items-center gap-3">
-            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            No Upfront Costs
-          </div>
-        </div>
       </section>
 
       {/* Simple Benefits Section */}
@@ -246,7 +224,7 @@ export default function Home() {
           <button
             className="bg-[#15304B] text-white font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
-            data-tally-open="mO5W8L"
+            data-tally-open="mZg1Oe"
             data-tally-layout="modal"
             data-tally-width="700"
             data-tally-emoji-text="📋"
@@ -260,7 +238,7 @@ export default function Home() {
               console.log('Secondary Tally button clicked');
               setTimeout(() => {
                 if (typeof window !== 'undefined' && window.Tally) {
-                  window.Tally.openPopup('mO5W8L');
+                  window.Tally.openPopup('mZg1Oe');
                 }
               }, 100);
             }}
