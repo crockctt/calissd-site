@@ -154,27 +154,30 @@ export default function Home() {
         
         {/* Main CTA Button */}
         <button
-          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-6"
+          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-12"
           style={{ cursor: 'pointer' }}
+          data-tally-open="mO5W8L"
+          data-tally-layout="modal"
+          data-tally-width="700"
+          data-tally-emoji-text="📋"
+          data-tally-emoji-animation="wave"
+          data-tally-auto-close="2000"
+          data-tally-hide-title="true"
+          data-tally-overlay="true"
+          data-tally-close-on-escape="true"
+          data-tally-close-on-overlay-click="true"
           onClick={() => {
-            // Open email client with pre-filled subject and body
-            const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
-            const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
-            window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
+            console.log('Tally button clicked');
+            console.log('Tally script loaded:', typeof window !== 'undefined' && window.Tally);
+            // Fallback to direct link if data attributes don't work
+            setTimeout(() => {
+              if (typeof window !== 'undefined' && window.Tally) {
+                window.Tally.openPopup('mO5W8L');
+              }
+            }, 100);
           }}
         >
           Start Free Evaluation Now
-        </button>
-        
-        {/* Phone CTA */}
-        <button
-          className="bg-[#15304B] text-white font-bold rounded-full px-8 py-3 text-lg shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200 mb-12"
-          style={{ cursor: 'pointer' }}
-          onClick={() => {
-            window.open('tel:6519648710', '_blank');
-          }}
-        >
-          📞 Call Now: 651-964-8710
         </button>
         
         {/* Trust Signals */}
@@ -243,11 +246,23 @@ export default function Home() {
           <button
             className="bg-[#15304B] text-white font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
+            data-tally-open="mO5W8L"
+            data-tally-layout="modal"
+            data-tally-width="700"
+            data-tally-emoji-text="📋"
+            data-tally-emoji-animation="wave"
+            data-tally-auto-close="2000"
+            data-tally-hide-title="true"
+            data-tally-overlay="true"
+            data-tally-close-on-escape="true"
+            data-tally-close-on-overlay-click="true"
             onClick={() => {
-              // Open email client with pre-filled subject and body
-              const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
-              const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
-              window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
+              console.log('Secondary Tally button clicked');
+              setTimeout(() => {
+                if (typeof window !== 'undefined' && window.Tally) {
+                  window.Tally.openPopup('mO5W8L');
+                }
+              }, 100);
             }}
           >
             Check My Eligibility Now
