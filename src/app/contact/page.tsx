@@ -27,7 +27,9 @@ export default function ContactPage() {
             className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200"
             style={{ cursor: 'pointer' }}
             onClick={() => {
-              window.open('https://tally.so/r/mO5W8L', '_blank');
+              const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
+              const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
+              window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
             }}
           >
             Start Free Evaluation Now
@@ -89,7 +91,9 @@ export default function ContactPage() {
             className="bg-[#15304B] text-white font-bold rounded-full px-8 py-3 text-lg shadow-md border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
             onClick={() => {
-              window.open('https://tally.so/r/mO5W8L', '_blank');
+              const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
+              const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
+              window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
             }}
           >
             Check My Eligibility Now

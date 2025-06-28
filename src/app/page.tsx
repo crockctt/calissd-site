@@ -153,14 +153,27 @@ export default function Home() {
         
         {/* Main CTA Button */}
         <button
-          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-12"
+          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-6"
           style={{ cursor: 'pointer' }}
           onClick={() => {
-            // Open a simple contact form or redirect to a working form
-            window.open('https://tally.so/r/mO5W8L', '_blank');
+            // Open email client with pre-filled subject and body
+            const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
+            const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
+            window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
           }}
         >
           Start Free Evaluation Now
+        </button>
+        
+        {/* Phone CTA */}
+        <button
+          className="bg-[#15304B] text-white font-bold rounded-full px-8 py-3 text-lg shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200 mb-12"
+          style={{ cursor: 'pointer' }}
+          onClick={() => {
+            window.open('tel:6519648710', '_blank');
+          }}
+        >
+          📞 Call Now: 651-964-8710
         </button>
         
         {/* Trust Signals */}
@@ -230,7 +243,10 @@ export default function Home() {
             className="bg-[#15304B] text-white font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
             onClick={() => {
-              window.open('https://tally.so/r/mO5W8L', '_blank');
+              // Open email client with pre-filled subject and body
+              const subject = encodeURIComponent('SSI/SSD Eligibility Evaluation Request');
+              const body = encodeURIComponent('Hi, I would like to see if I qualify for SSI/SSD benefits. Please contact me to discuss my situation.');
+              window.open(`mailto:calileads11@gmail.com?subject=${subject}&body=${body}`, '_blank');
             }}
           >
             Check My Eligibility Now
