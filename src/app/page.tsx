@@ -154,7 +154,7 @@ export default function Home() {
         
         {/* Main CTA Button */}
         <button
-          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-12"
+          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-8"
           style={{ cursor: 'pointer' }}
           data-tally-open="mZg1Oe"
           data-tally-layout="modal"
@@ -179,6 +179,28 @@ export default function Home() {
         >
           Start Free Evaluation Now
         </button>
+        
+        {/* Trust Signals */}
+        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            100% Free & Confidential
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            California Attorneys
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            No Upfront Costs
+          </div>
+        </div>
       </section>
 
       {/* Simple Benefits Section */}
