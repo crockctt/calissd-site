@@ -147,18 +147,14 @@ export default function Home() {
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
       
       {/* Hero Section - Conversion Focused */}
-      <section className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4 pt-8 pb-12 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-6 leading-tight">
+      <section className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4 pt-16 pb-20 bg-gradient-to-b from-[#F6F3EE] to-white">
+        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-12 leading-tight">
           See if you qualify for SSI/SSD
         </h1>
         
-        <p className="text-xl text-[#4B5A6A] mb-8 max-w-lg font-medium">
-          Free 60-second evaluation. No obligation.
-        </p>
-        
         {/* Main CTA Button */}
         <button
-          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-8"
+          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-12"
           style={{ cursor: 'pointer' }}
           onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
         >
@@ -166,21 +162,21 @@ export default function Home() {
         </button>
         
         {/* Trust Signals */}
-        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+        <div className="flex flex-col sm:flex-row gap-8 text-sm text-[#4B5A6A] font-medium">
+          <div className="flex items-center gap-3">
+            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             100% Free & Confidential
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex items-center gap-3">
+            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             California Attorneys
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex items-center gap-3">
+            <svg className="w-6 h-6 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             No Upfront Costs
