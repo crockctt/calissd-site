@@ -146,71 +146,99 @@ export default function Home() {
       <Header />
       {/* Tally Popup Script */}
       <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
-      {/* Hero Section - Purpose Driven */}
-      <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-12 pb-8 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-center text-5xl sm:text-6xl font-extrabold text-[#15304B] mb-4 leading-tight">
-          Get Your Disability Benefits.<br />
-          <span className="block text-5xl sm:text-6xl font-extrabold text-[#15304B] mt-2">Start Your Free Evaluation Now.</span>
+      
+      {/* Hero Section - Conversion Focused */}
+      <section className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4 pt-8 pb-12 bg-gradient-to-b from-[#F6F3EE] to-white">
+        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-6 leading-tight">
+          See if you qualify for SSI/SSD
         </h1>
-        <p className="text-lg text-[#4B5A6A] mb-6 max-w-xl font-medium">
-          Fast. Free. 100% Confidential.
+        
+        <p className="text-xl text-[#4B5A6A] mb-8 max-w-lg font-medium">
+          Free 60-second evaluation. No obligation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
+        
+        {/* Main CTA Button */}
+        <button
+          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-8"
+          style={{ cursor: 'pointer' }}
+          onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
+        >
+          Start Free Evaluation Now
+        </button>
+        
+        {/* Trust Signals */}
+        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            100% Free & Confidential
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            California Attorneys
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            No Upfront Costs
+          </div>
+        </div>
+      </section>
+
+      {/* Simple Benefits Section */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-8">
+            Get the benefits you deserve
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-[#15304B] mb-2">Quick Evaluation</h3>
+              <p className="text-[#4B5A6A]">60-second survey to check your eligibility</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-[#15304B] mb-2">Expert Help</h3>
+              <p className="text-[#4B5A6A]">Connect with experienced California attorneys</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-[#15304B] mb-2">No Risk</h3>
+              <p className="text-[#4B5A6A]">Free consultation, no upfront costs</p>
+            </div>
+          </div>
+          
+          {/* Secondary CTA */}
           <button
-            className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-10 py-5 text-xl shadow-lg border-none outline-none focus:ring-2 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] transition-all duration-200 mb-2 sm:mb-0"
+            className="bg-[#15304B] text-white font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
             style={{ cursor: 'pointer' }}
             onClick={() => document.querySelector('.tally-open')?.dispatchEvent(new Event('click', { bubbles: true }))}
           >
-            Start My Free Disability Survey
+            Check My Eligibility Now
           </button>
         </div>
       </section>
-      {/* Value Proposition */}
-      <section className="py-10 px-4 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-4">CaliSSD makes it easy for Californians to get the Social Security disability benefits and legal help they need.</h2>
-        <p className="text-lg text-[#15304B] mb-4">We connect you with experienced attorneys—no upfront cost, no obligation.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <span className="bg-[#F7B32B]/20 text-[#15304B] rounded-full px-6 py-2 font-semibold">Free consultation</span>
-          <span className="bg-[#F7B32B]/20 text-[#15304B] rounded-full px-6 py-2 font-semibold">Confidential and compassionate support</span>
-        </div>
-      </section>
-      {/* How It Works (duplicated from /how-it-works) */}
-      <section className="py-12 px-4 bg-white border-t border-[#F7B32B]/40">
-        <h2 className="text-3xl font-extrabold text-[#15304B] mb-4 text-center">How It Works</h2>
-        <p className="text-lg text-[#4B5A6A] mb-10 text-center max-w-2xl mx-auto">CaliSSD makes it simple to get the Social Security disability benefits you deserve. Here's how our process works, step by step.</p>
-        <div className="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto mb-12">
-          <div className="flex-1 icon-card items-center">
-            {/* Icon 1 - plain clipboard SVG (no checkmark) */}
-            <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 3h-1.18C17.4 1.84 16.3 1 15 1h-6c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 3h6v2H9V3zm10 18H5V5h2v2c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V5h2v16z"/>
-            </svg>
-            <h3 className="text-xl font-bold mb-2">1. See if you qualify</h3>
-            <p className="text-[#15304B]">Answer a few quick questions to get started.</p>
-          </div>
-          <div className="flex-1 icon-card items-center">
-            {/* Icon 2 */}
-            <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05C15.64 13.1 17 14.28 17 15.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            <h3 className="text-xl font-bold mb-2">2. Talk to a real advocate</h3>
-            <p className="text-[#15304B]">Get free, confidential advice from a California expert.</p>
-          </div>
-          <div className="flex-1 icon-card items-center">
-            {/* Icon 3 */}
-            <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-            <h3 className="text-xl font-bold mb-2">3. Get matched with a lawyer</h3>
-            <p className="text-[#15304B]">We'll connect you with a top Social Security disability attorney.</p>
-          </div>
-          <div className="flex-1 icon-card items-center">
-            {/* Icon 4 - simple checkmark SVG */}
-            <svg className="text-4xl text-[#F7B32B] mb-2" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M6 12l5 5 7-7" stroke="#F7B32B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            </svg>
-            <h3 className="text-xl font-bold mb-2">4. Get your benefits</h3>
-            <p className="text-[#15304B]">Your lawyer handles the paperwork and fights for your case.</p>
-          </div>
-        </div>
-      </section>
-      {/* Gradient Transition */}
-      <div className="h-16 bg-gradient-to-b from-white to-[#F6F3EE]"></div>
+
       {/* Footer */}
       <footer className="text-center text-[#15304B] py-8 text-base bg-[#F6F3EE] border-t-0 mt-auto font-medium tracking-tight">
         <div>About | <Link href="/contact">Contact</Link> | <Link href="/privacy">Privacy Policy</Link> | <Link href="/disclaimer">Disclaimer</Link></div>
