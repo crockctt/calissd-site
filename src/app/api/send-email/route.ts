@@ -4,14 +4,6 @@ export async function POST(request: NextRequest) {
   try {
     const { to, subject, html } = await request.json();
 
-    // Use a simple, reliable email service
-    const emailData = {
-      from: 'noreply@calissd.com',
-      to: to,
-      subject: subject,
-      html: html
-    };
-
     // For now, we'll use a simple approach that logs the email
     // In production, you can easily switch to SendGrid, Mailgun, or another service
     console.log('📧 Email would be sent:');
