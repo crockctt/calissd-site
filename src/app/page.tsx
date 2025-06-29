@@ -146,58 +146,24 @@ export default function Home() {
     <div className="min-h-screen home-bg flex flex-col relative font-sans">
       <Header />
       
-      {/* Hero Section - Conversion Focused */}
-      <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-16 pb-12 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-8 leading-tight">
-          See if you qualify for SSI/SSD
-        </h1>
-        
-        <p className="text-xl text-[#4B5A6A] mb-8 max-w-2xl mx-auto">
-          Get your free evaluation in 60 seconds. No obligation, no upfront costs.
-        </p>
-        
-        {/* Trust Signals */}
-        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium mb-8">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            100% Free & Confidential
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            California Attorneys
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            No Upfront Costs
-          </div>
-        </div>
-      </section>
-
-      {/* Embedded Form Section */}
+      {/* Hero Section - Focused like MN site */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-4">
-              Get Your Free Evaluation
-            </h2>
-            <p className="text-lg text-[#4B5A6A] max-w-2xl mx-auto">
-              Fill out the form below and a California disability attorney will contact you to discuss your case. 
-              This evaluation is completely free and confidential.
-            </p>
-          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#15304B] mb-6 text-center">
+            Back Injuries
+          </h1>
           
-          {/* Embedded Tally Form */}
-          <div className="bg-[#F6F3EE] rounded-lg p-6 shadow-lg">
+          <p className="text-lg text-[#4B5A6A] mb-8 text-center max-w-3xl mx-auto">
+            If you have a <strong>back injury or persistent back pain</strong>, you may be entitled to Social Security disability benefits. 
+            To see if you qualify for Social Security disability for your condition, fill in the below information and a representative will contact you about your claim.
+          </p>
+          
+          {/* Embedded Form - Styled like MN site */}
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
             <iframe
               src="https://tally.so/embed/mZg1Oe?alignLeft=1&hideTitle=1&transparentBackground=1"
               width="100%"
-              height="600"
+              height="700"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
@@ -206,28 +172,16 @@ export default function Home() {
             />
           </div>
           
-          {/* Additional Trust Signals */}
-          <div className="text-center mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-[#4B5A6A]">
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Quick 60-second evaluation
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                </svg>
-                Experienced California attorneys
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-                No upfront costs
-              </div>
-            </div>
+          {/* Trust Note */}
+          <div className="text-center mt-8 text-sm text-[#4B5A6A]">
+            <p className="mb-4">
+              The information you obtain at this site is not, nor is it intended to be, legal advice. 
+              This site is not affiliated with or endorsed by the Social Security Administration or www.ssa.gov.
+            </p>
+            <p>
+              The information you submit about yourself will be given to an independent law firm, lawyer or advocate 
+              who will contact you to evaluate your potential Social Security disability claim.
+            </p>
           </div>
         </div>
       </section>
