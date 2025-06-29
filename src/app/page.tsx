@@ -190,7 +190,7 @@ export default function Home() {
                   });
                 }
 
-                // Send to your email (you can replace with your actual email)
+                // Send email using EmailJS or similar service
                 const emailBody = `
 New Disability Evaluation Request
 
@@ -209,21 +209,45 @@ Disabilities: ${data.disabilities}
 Consent: ${data.consent ? 'Yes' : 'No'}
 
 Submitted: ${new Date().toLocaleString()}
+Website: calissd.com
                 `;
 
-                // For now, we'll use a simple mailto link
-                // In production, you'd want to use a proper email service
-                const mailtoLink = `mailto:calileads11@gmail.com?subject=New Disability Evaluation Request - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
-                
-                // Show success message
-                alert('Thank you! A California disability attorney will contact you within 24 hours.');
-                
-                // Open email client (optional - you can remove this)
-                // window.open(mailtoLink);
+                // Use a simple email service (you can replace with your preferred service)
+                const response = await fetch('/api/send-email', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    to: 'calileads11@gmail.com',
+                    subject: `New Disability Evaluation Request - ${data.firstName} ${data.lastName}`,
+                    text: emailBody,
+                    from: 'noreply@calissd.com'
+                  })
+                });
+
+                if (response.ok) {
+                  // Show success message
+                  alert('Thank you! A California disability attorney will contact you within 24 hours.');
+                  
+                  // Clear the form
+                  e.currentTarget.reset();
+                } else {
+                  throw new Error('Failed to send email');
+                }
                 
               } catch (error) {
                 console.error('Form submission error:', error);
-                alert('Thank you for your submission! We will contact you soon.');
+                
+                // Fallback: Store in localStorage and show manual contact info
+                const leads = JSON.parse(localStorage.getItem('disability_leads') || '[]');
+                leads.push({
+                  ...data,
+                  timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('disability_leads', JSON.stringify(leads));
+                
+                alert('Thank you for your submission! Please call us at 651-964-8710 or email calileads11@gmail.com to discuss your case.');
               }
             }}>
               {/* Name */}
