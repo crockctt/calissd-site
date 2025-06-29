@@ -147,31 +147,17 @@ export default function Home() {
       <Header />
       
       {/* Hero Section - Conversion Focused */}
-      <section className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4 pt-16 pb-20 bg-gradient-to-b from-[#F6F3EE] to-white">
-        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-12 leading-tight">
+      <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 pt-16 pb-12 bg-gradient-to-b from-[#F6F3EE] to-white">
+        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#15304B] mb-8 leading-tight">
           See if you qualify for SSI/SSD
         </h1>
         
-        {/* Main CTA Button */}
-        <button
-          className="bg-[#F7B32B] text-[#15304B] font-bold rounded-full px-12 py-6 text-2xl shadow-xl border-none outline-none focus:ring-4 focus:ring-[#F7B32B] focus:ring-offset-2 hover:bg-[#FFD369] hover:scale-105 transition-all duration-200 mb-8"
-          style={{ cursor: 'pointer' }}
-          data-tally-open="mZg1Oe"
-          data-tally-layout="modal"
-          data-tally-width="700"
-          data-tally-emoji-text="📋"
-          data-tally-emoji-animation="wave"
-          data-tally-auto-close="2000"
-          data-tally-hide-title="true"
-          data-tally-overlay="true"
-          data-tally-close-on-escape="true"
-          data-tally-close-on-overlay-click="true"
-        >
-          Start Free Evaluation Now
-        </button>
+        <p className="text-xl text-[#4B5A6A] mb-8 max-w-2xl mx-auto">
+          Get your free evaluation in 60 seconds. No obligation, no upfront costs.
+        </p>
         
         {/* Trust Signals */}
-        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium">
+        <div className="flex flex-col sm:flex-row gap-6 text-sm text-[#4B5A6A] font-medium mb-8">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -193,62 +179,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Simple Benefits Section */}
+      {/* Embedded Form Section */}
       <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-8">
-            Get the benefits you deserve
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-[#15304B] mb-2">Quick Evaluation</h3>
-              <p className="text-[#4B5A6A]">60-second survey to check your eligibility</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-[#15304B] mb-2">Expert Help</h3>
-              <p className="text-[#4B5A6A]">Connect with experienced California attorneys</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-[#F7B32B]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-[#15304B] mb-2">No Risk</h3>
-              <p className="text-[#4B5A6A]">Free consultation, no upfront costs</p>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#15304B] mb-4">
+              Get Your Free Evaluation
+            </h2>
+            <p className="text-lg text-[#4B5A6A] max-w-2xl mx-auto">
+              Fill out the form below and a California disability attorney will contact you to discuss your case. 
+              This evaluation is completely free and confidential.
+            </p>
           </div>
           
-          {/* Secondary CTA */}
-          <button
-            className="bg-[#15304B] text-white font-bold rounded-full px-10 py-4 text-xl shadow-lg border-none outline-none focus:ring-4 focus:ring-[#15304B] focus:ring-offset-2 hover:bg-[#1a3d5a] transition-all duration-200"
-            style={{ cursor: 'pointer' }}
-            data-tally-open="mZg1Oe"
-            data-tally-layout="modal"
-            data-tally-width="700"
-            data-tally-emoji-text="📋"
-            data-tally-emoji-animation="wave"
-            data-tally-auto-close="2000"
-            data-tally-hide-title="true"
-            data-tally-overlay="true"
-            data-tally-close-on-escape="true"
-            data-tally-close-on-overlay-click="true"
-          >
-            Check My Eligibility Now
-          </button>
+          {/* Embedded Tally Form */}
+          <div className="bg-[#F6F3EE] rounded-lg p-6 shadow-lg">
+            <iframe
+              src="https://tally.so/embed/mZg1Oe?alignLeft=1&hideTitle=1&transparentBackground=1"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="SSI/SSD Eligibility Evaluation"
+              className="rounded-lg"
+            />
+          </div>
+          
+          {/* Additional Trust Signals */}
+          <div className="text-center mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-[#4B5A6A]">
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Quick 60-second evaluation
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                </svg>
+                Experienced California attorneys
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-[#F7B32B]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+                No upfront costs
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
