@@ -13,7 +13,7 @@ declare global {
       openPopup: (formId: string) => void;
     };
     emailjs?: {
-      send: (serviceId: string, templateId: string, templateParams: any, publicKey: string) => Promise<any>;
+      send: (serviceId: string, templateId: string, templateParams: Record<string, unknown>, publicKey: string) => Promise<unknown>;
       init: (publicKey: string) => void;
     };
   }
