@@ -244,7 +244,7 @@ export default function Home() {
                   console.log('✅ Email sent successfully via EmailJS');
                   
                   // Show success message
-                  alert('Thank you! A California disability attorney will contact you within 24 hours.');
+                  alert('Thanks for submitting');
                   
                   // Clear the form completely
                   e.currentTarget.reset();
@@ -267,7 +267,7 @@ export default function Home() {
                 });
                 localStorage.setItem('disability_leads', JSON.stringify(leads));
                 
-                alert('Thank you for your submission! Please call us at 651-964-8710 or email calileads11@gmail.com to discuss your case.');
+                alert('Thanks for submitting');
                 
                 // Clear the form even on error
                 e.currentTarget.reset();
