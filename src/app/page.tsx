@@ -244,7 +244,12 @@ export default function Home() {
                   })
                 });
 
+                console.log('📧 EmailJS Response Status:', response.status);
+                console.log('📧 EmailJS Response OK:', response.ok);
+
                 if (response.ok) {
+                  const result = await response.json();
+                  console.log('📧 EmailJS Success Result:', result);
                   console.log('✅ Email sent successfully');
                   
                   // Show success message
@@ -257,11 +262,18 @@ export default function Home() {
                   submitButton.disabled = false;
                   submitButton.textContent = originalText;
                 } else {
-                  throw new Error('Email service failed');
+                  const errorText = await response.text();
+                  console.error('❌ EmailJS Error Response:', errorText);
+                  console.error('❌ EmailJS Status:', response.status);
+                  throw new Error(`Email service failed: ${response.status} - ${errorText}`);
                 }
                 
               } catch (error) {
                 console.error('Form submission error:', error);
+                
+                // Show detailed error message
+                const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+                alert(`Email failed to send: ${errorMessage}. Please call us at 651-964-8710 or email calileads11@gmail.com to discuss your case.`);
                 
                 // Fallback: Store in localStorage and show manual contact info
                 const leads = JSON.parse(localStorage.getItem('disability_leads') || '[]');
@@ -270,8 +282,6 @@ export default function Home() {
                   timestamp: new Date().toISOString()
                 });
                 localStorage.setItem('disability_leads', JSON.stringify(leads));
-                
-                alert('Thanks for submitting');
                 
                 // Clear the form even on error
                 e.currentTarget.reset();
