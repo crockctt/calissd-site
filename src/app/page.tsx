@@ -180,12 +180,15 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Date of Birth */}
+              {/* Age */}
               <div>
-                <label className="block text-sm font-medium text-[#15304B] mb-2">Date of Birth *</label>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Age *</label>
                 <input 
-                  type="date" 
+                  type="number" 
+                  min="18"
+                  max="120"
                   required
+                  placeholder="Enter your age"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
                 />
               </div>
