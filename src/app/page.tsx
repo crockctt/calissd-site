@@ -219,27 +219,6 @@ export default function Home() {
                 }
 
                 // Send email using reliable service
-                const emailData = {
-                  to: 'calileads11@gmail.com',
-                  subject: `New Disability Evaluation - ${data.firstName} ${data.lastName}`,
-                  html: `
-                    <h2>New Disability Evaluation Request</h2>
-                    <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-                    <p><strong>Age:</strong> ${data.age}</p>
-                    <p><strong>Phone:</strong> ${data.phone}</p>
-                    <p><strong>Email:</strong> ${data.email}</p>
-                    <p><strong>Work History:</strong> ${data.workHistory}</p>
-                    <p><strong>Last Work Date:</strong> ${data.lastWorkDate}</p>
-                    <p><strong>Work Type:</strong> ${data.workType}</p>
-                    <p><strong>Application Status:</strong> ${data.applicationStatus}</p>
-                    <p><strong>Disabilities:</strong> ${data.disabilities}</p>
-                    <p><strong>Consent:</strong> ${data.consent ? 'Yes' : 'No'}</p>
-                    <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
-                    <p><strong>Website:</strong> calissd.com</p>
-                  `
-                };
-
-                // Use a simple, reliable email service
                 const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
                   method: 'POST',
                   headers: {
