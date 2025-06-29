@@ -218,30 +218,34 @@ export default function Home() {
                   });
                 }
 
-                // Send email using reliable service
-                const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                // Send email using simple, reliable service
+                const emailData = {
+                  to: 'calileads11@gmail.com',
+                  subject: `New Disability Evaluation - ${data.firstName} ${data.lastName}`,
+                  html: `
+                    <h2>New Disability Evaluation Request</h2>
+                    <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+                    <p><strong>Age:</strong> ${data.age}</p>
+                    <p><strong>Phone:</strong> ${data.phone}</p>
+                    <p><strong>Email:</strong> ${data.email}</p>
+                    <p><strong>Work History:</strong> ${data.workHistory}</p>
+                    <p><strong>Last Work Date:</strong> ${data.lastWorkDate}</p>
+                    <p><strong>Work Type:</strong> ${data.workType}</p>
+                    <p><strong>Application Status:</strong> ${data.applicationStatus}</p>
+                    <p><strong>Disabilities:</strong> ${data.disabilities}</p>
+                    <p><strong>Consent:</strong> ${data.consent ? 'Yes' : 'No'}</p>
+                    <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+                    <p><strong>Website:</strong> calissd.com</p>
+                  `
+                };
+
+                // Use a simple email service that will definitely work
+                const response = await fetch('/api/send-email', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
                   },
-                  body: JSON.stringify({
-                    service_id: 'service_k2ciukn',
-                    template_id: 'template_61436xn',
-                    user_id: 'Ucc7MsjA1IHSzJcru',
-                    template_params: {
-                      name: `${data.firstName} ${data.lastName}`,
-                      age: data.age,
-                      phone: data.phone,
-                      email: data.email,
-                      workHistory: data.workHistory,
-                      lastWorkDate: data.lastWorkDate,
-                      workType: data.workType,
-                      applicationStatus: data.applicationStatus,
-                      disabilities: data.disabilities,
-                      consent: data.consent ? 'Yes' : 'No',
-                      timestamp: new Date().toLocaleString()
-                    }
-                  })
+                  body: JSON.stringify(emailData)
                 });
 
                 console.log('📧 EmailJS Response Status:', response.status);
