@@ -237,10 +237,8 @@ export default function Home() {
 
                   console.log('✅ Email sent successfully via EmailJS');
                   
-                  // Show success message
+                  // Show success message and clear form
                   alert('Thank you! A California disability attorney will contact you within 24 hours.');
-                  
-                  // Clear the form
                   e.currentTarget.reset();
                 } else {
                   throw new Error('EmailJS not loaded');
