@@ -4,13 +4,17 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "./components/Header";
 
-// Extend window type for gtag
+// Extend window type for gtag and emailjs
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
     Tally?: {
       openPopup: (formId: string) => void;
+    };
+    emailjs?: {
+      send: (serviceId: string, templateId: string, templateParams: any, publicKey: string) => Promise<any>;
+      init: (publicKey: string) => void;
     };
   }
 }
@@ -102,6 +106,24 @@ export default function Home() {
     }
   }, []);
 
+  // Load EmailJS
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Load EmailJS script
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+      script.async = true;
+      script.onload = () => {
+        console.log('✅ EmailJS loaded successfully');
+        // Initialize EmailJS
+        if (window.emailjs) {
+          window.emailjs.init('Ucc7MsjA1IHSzJcru');
+        }
+      };
+      document.head.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white flex flex-col relative font-sans">
       <Header />
@@ -190,50 +212,38 @@ export default function Home() {
                   });
                 }
 
-                // Send email using EmailJS or similar service
-                const emailBody = `
-New Disability Evaluation Request
+                // Send email using EmailJS
+                if (window.emailjs) {
+                  const templateParams = {
+                    name: `${data.firstName} ${data.lastName}`,
+                    age: data.age,
+                    phone: data.phone,
+                    email: data.email,
+                    workHistory: data.workHistory,
+                    lastWorkDate: data.lastWorkDate,
+                    workType: data.workType,
+                    applicationStatus: data.applicationStatus,
+                    disabilities: data.disabilities,
+                    consent: data.consent ? 'Yes' : 'No',
+                    timestamp: new Date().toLocaleString()
+                  };
 
-Name: ${data.firstName} ${data.lastName}
-Age: ${data.age}
-Phone: ${data.phone}
-Email: ${data.email}
+                  await window.emailjs.send(
+                    'service_k2ciukn',
+                    'template_61436xn',
+                    templateParams,
+                    'Ucc7MsjA1IHSzJcru'
+                  );
 
-Work History: ${data.workHistory}
-Last Work Date: ${data.lastWorkDate}
-Work Type: ${data.workType}
-Application Status: ${data.applicationStatus}
-
-Disabilities: ${data.disabilities}
-
-Consent: ${data.consent ? 'Yes' : 'No'}
-
-Submitted: ${new Date().toLocaleString()}
-Website: calissd.com
-                `;
-
-                // Use a simple email service (you can replace with your preferred service)
-                const response = await fetch('/api/send-email', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    to: 'calileads11@gmail.com',
-                    subject: `New Disability Evaluation Request - ${data.firstName} ${data.lastName}`,
-                    text: emailBody,
-                    from: 'noreply@calissd.com'
-                  })
-                });
-
-                if (response.ok) {
+                  console.log('✅ Email sent successfully via EmailJS');
+                  
                   // Show success message
                   alert('Thank you! A California disability attorney will contact you within 24 hours.');
                   
                   // Clear the form
                   e.currentTarget.reset();
                 } else {
-                  throw new Error('Failed to send email');
+                  throw new Error('EmailJS not loaded');
                 }
                 
               } catch (error) {
