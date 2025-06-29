@@ -153,16 +153,154 @@ export default function Home() {
               <h2 className="text-xl font-semibold text-[#15304B] mb-2">Start Your Free Evaluation</h2>
               <p className="text-sm text-[#4B5A6A]">Takes less than 2 minutes to complete</p>
             </div>
-            <iframe
-              src="https://tally.so/embed/mZg1Oe?alignLeft=1&hideTitle=1&transparentBackground=1"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="SSI/SSD Eligibility Evaluation"
-              className="rounded-lg"
-            />
+            
+            {/* Custom Form - No Duplicates */}
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              // Handle form submission
+              alert('Thank you! A California disability attorney will contact you within 24 hours.');
+            }}>
+              {/* Name */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-[#15304B] mb-2">First Name *</label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#15304B] mb-2">Last Name *</label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Date of Birth */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Date of Birth *</label>
+                <input 
+                  type="date" 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Email *</label>
+                <input 
+                  type="email" 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                />
+              </div>
+
+              {/* Work History */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Which describes how much you have worked? *</label>
+                <select 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                >
+                  <option value="">Select an option</option>
+                  <option value="most">I have worked in MOST of the last 10 years</option>
+                  <option value="some">I have worked in SOME of the last 10 years</option>
+                  <option value="little">I have worked in LITTLE or NONE of the past 10 years</option>
+                </select>
+              </div>
+
+              {/* Last Work Date */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">When did you last work? *</label>
+                <select 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                >
+                  <option value="">Select an option</option>
+                  <option value="this-year">This year</option>
+                  <option value="last-year">Last year</option>
+                  <option value="2-3-years">2 to 3 years ago</option>
+                  <option value="4-5-years">4 to 5 years ago</option>
+                  <option value="6-plus">6 or more years ago</option>
+                </select>
+              </div>
+
+              {/* Work Type */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">How would you characterize your past work? *</label>
+                <select 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                >
+                  <option value="">Select an option</option>
+                  <option value="heavy">Heavy or Very Heavy (lift 100 lbs or more)</option>
+                  <option value="medium">Medium (have to lift 50 lbs)</option>
+                  <option value="light">Light (have to lift 20 lbs)</option>
+                  <option value="sit-down">Sit down job</option>
+                  <option value="never">Never worked</option>
+                </select>
+              </div>
+
+              {/* Application Status - NO DUPLICATE */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">Have you already applied for Social Security Disability benefits? *</label>
+                <select 
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                >
+                  <option value="">Select an option</option>
+                  <option value="denied">Yes, denied</option>
+                  <option value="pending">Yes, pending</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+
+              {/* Disabilities */}
+              <div>
+                <label className="block text-sm font-medium text-[#15304B] mb-2">What are your disabilities? *</label>
+                <textarea 
+                  required
+                  rows={3}
+                  placeholder="Please describe your physical or mental conditions..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F7B32B] focus:border-transparent"
+                />
+              </div>
+
+              {/* Consent */}
+              <div className="flex items-start gap-3">
+                <input 
+                  type="checkbox" 
+                  required
+                  className="mt-1 w-4 h-4 text-[#F7B32B] border-gray-300 rounded focus:ring-[#F7B32B]"
+                />
+                <label className="text-sm text-[#4B5A6A]">
+                  I agree to the privacy policy and consent to being contacted about my potential claim. *
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <button 
+                type="submit"
+                className="w-full bg-[#F7B32B] text-[#15304B] font-bold py-4 px-6 rounded-lg hover:bg-[#FFD369] transition-colors duration-200 text-lg"
+              >
+                Submit Free Evaluation
+              </button>
+            </form>
           </div>
           
           {/* Additional Benefits */}
