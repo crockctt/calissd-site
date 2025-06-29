@@ -180,6 +180,12 @@ export default function Home() {
             <form className="space-y-6" onSubmit={async (e) => {
               e.preventDefault();
               
+              // Get submit button and disable it
+              const submitButton = e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement;
+              const originalText = submitButton.textContent;
+              submitButton.disabled = true;
+              submitButton.textContent = 'Submitting...';
+              
               // Get form data
               const formData = new FormData(e.currentTarget);
               const data = {
@@ -237,9 +243,15 @@ export default function Home() {
 
                   console.log('✅ Email sent successfully via EmailJS');
                   
-                  // Show success message and clear form
+                  // Show success message
                   alert('Thank you! A California disability attorney will contact you within 24 hours.');
+                  
+                  // Clear the form completely
                   e.currentTarget.reset();
+                  
+                  // Reset button
+                  submitButton.disabled = false;
+                  submitButton.textContent = originalText;
                 } else {
                   throw new Error('EmailJS not loaded');
                 }
@@ -256,6 +268,13 @@ export default function Home() {
                 localStorage.setItem('disability_leads', JSON.stringify(leads));
                 
                 alert('Thank you for your submission! Please call us at 651-964-8710 or email calileads11@gmail.com to discuss your case.');
+                
+                // Clear the form even on error
+                e.currentTarget.reset();
+                
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
               }
             }}>
               {/* Name */}
@@ -408,7 +427,7 @@ export default function Home() {
               {/* Submit Button */}
               <button 
                 type="submit"
-                className="w-full bg-[#F7B32B] text-[#15304B] font-bold py-4 px-6 rounded-lg hover:bg-[#FFD369] transition-colors duration-200 text-lg"
+                className="w-full bg-[#F7B32B] text-[#15304B] font-bold py-4 px-6 rounded-lg hover:bg-[#FFD369] transition-colors duration-200 text-lg disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 Submit Free Evaluation
               </button>
