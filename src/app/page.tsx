@@ -166,8 +166,7 @@ export default function Home() {
           {/* Embedded Form */}
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
             <div className="text-center mb-4">
-              <h2 className="text-xl font-semibold text-[#15304B] mb-2">Start Your Free Evaluation</h2>
-              <p className="text-sm text-[#4B5A6A]">Takes less than 2 minutes to complete</p>
+              {/* Removed subheadline and time-to-complete text as requested */}
             </div>
             
             {/* Custom Form - No Duplicates */}
