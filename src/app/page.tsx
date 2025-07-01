@@ -136,15 +136,9 @@ export default function Home() {
             Get Your Disability Benefits
           </h1>
           
-          {/* Subheadline */}
-          <p className="text-xl text-[#F7B32B] font-semibold mb-6 text-center">
-            Free Evaluation - No Upfront Costs
-          </p>
-          
           {/* Clear Description */}
           <p className="text-lg text-[#4B5A6A] mb-6 text-center max-w-3xl mx-auto leading-relaxed">
-            If you have a physical or mental condition that prevents you from working, you may be entitled to Social Security Disability (SSDI) or Supplemental Security Income (SSI) benefits. 
-            <strong>Get your free evaluation today</strong> and a California disability attorney will contact you about your claim.
+            If you have a physical or mental condition that prevents you from working, you may be entitled to Social Security Disability (SSDI) or Supplemental Security Income (SSI) benefits. A California disability attorney will contact you about your claim.
           </p>
           
           {/* Trust Signals */}
@@ -265,6 +259,13 @@ export default function Home() {
                   // Reset button
                   submitButton.disabled = false;
                   submitButton.textContent = originalText;
+
+                  // Send to Google Sheets via Apps Script Web App
+                  await fetch('https://script.google.com/macros/s/AKfycbzFhilXe_aN2SKC05DnPlmY52y_O4H6yyaYCeviswm429UEl_Zge2cvkCxKtJxBCZhy/exec', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                  });
                 } else {
                   const errorText = await response.text();
                   console.error('❌ EmailJS Error Response:', errorText);
