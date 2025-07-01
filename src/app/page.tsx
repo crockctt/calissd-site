@@ -211,69 +211,27 @@ export default function Home() {
                   });
                 }
 
-                // Send email using simple, reliable service
-                const emailData = {
-                  to: 'calileads11@gmail.com',
-                  subject: `New Disability Evaluation - ${data.firstName} ${data.lastName}`,
-                  html: `
-                    <h2>New Disability Evaluation Request</h2>
-                    <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-                    <p><strong>Age:</strong> ${data.age}</p>
-                    <p><strong>Phone:</strong> ${data.phone}</p>
-                    <p><strong>Email:</strong> ${data.email}</p>
-                    <p><strong>Work History:</strong> ${data.workHistory}</p>
-                    <p><strong>Last Work Date:</strong> ${data.lastWorkDate}</p>
-                    <p><strong>Work Type:</strong> ${data.workType}</p>
-                    <p><strong>Application Status:</strong> ${data.applicationStatus}</p>
-                    <p><strong>Disabilities:</strong> ${data.disabilities}</p>
-                    <p><strong>Consent:</strong> ${data.consent ? 'Yes' : 'No'}</p>
-                    <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
-                    <p><strong>Website:</strong> calissd.com</p>
-                  `
-                };
-
-                // Use a simple email service that will definitely work
-                const response = await fetch('/api/send-email', {
+                // Send to Google Sheets via Apps Script Web App
+                await fetch('https://script.google.com/macros/s/AKfycbzFhilXe_aN2SKC05DnPlmY52y_O4H6yyaYCeviswm429UEl_Zge2cvkCxKtJxBCZhy/exec', {
                   method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(emailData)
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(data)
                 });
 
-                console.log('📧 EmailJS Response Status:', response.status);
-                console.log('📧 EmailJS Response OK:', response.ok);
-
-                if (response.ok) {
-                  const result = await response.json();
-                  console.log('📧 EmailJS Success Result:', result);
-                  console.log('✅ Email sent successfully');
-                  
-                  // Show success message
-                  alert('Thanks for submitting');
-                  
-                  // Clear the form completely
-                  if (e.currentTarget && typeof e.currentTarget.reset === 'function') {
-                    e.currentTarget.reset();
-                  }
-                  
-                  // Reset button
-                  submitButton.disabled = false;
-                  submitButton.textContent = originalText;
-
-                  // Send to Google Sheets via Apps Script Web App
-                  await fetch('https://script.google.com/macros/s/AKfycbzFhilXe_aN2SKC05DnPlmY52y_O4H6yyaYCeviswm429UEl_Zge2cvkCxKtJxBCZhy/exec', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                  });
-                } else {
-                  const errorText = await response.text();
-                  console.error('❌ EmailJS Error Response:', errorText);
-                  console.error('❌ EmailJS Status:', response.status);
-                  throw new Error(`Email service failed: ${response.status} - ${errorText}`);
+                console.log('✅ Email sent successfully');
+                
+                // Show success message
+                alert('Thanks for submitting');
+                
+                // Clear the form completely
+                if (e.currentTarget && typeof e.currentTarget.reset === 'function') {
+                  e.currentTarget.reset();
                 }
                 
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+
               } catch (error) {
                 console.error('Form submission error:', error);
                 
