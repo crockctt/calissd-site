@@ -254,7 +254,9 @@ export default function Home() {
                   alert('Thanks for submitting');
                   
                   // Clear the form completely
-                  e.currentTarget.reset();
+                  if (e.currentTarget && typeof e.currentTarget.reset === 'function') {
+                    e.currentTarget.reset();
+                  }
                   
                   // Reset button
                   submitButton.disabled = false;
@@ -289,7 +291,9 @@ export default function Home() {
                 localStorage.setItem('disability_leads', JSON.stringify(leads));
                 
                 // Clear the form even on error
-                e.currentTarget.reset();
+                if (e.currentTarget && typeof e.currentTarget.reset === 'function') {
+                  e.currentTarget.reset();
+                }
                 
                 // Reset button
                 submitButton.disabled = false;
