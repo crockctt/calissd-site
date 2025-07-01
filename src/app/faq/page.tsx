@@ -42,7 +42,7 @@ export default function FAQPage() {
         <div className="space-y-8 text-[#15304B] text-lg">
           <div>
             <h3 className="font-bold mb-2">How much does CaliSSD charge?</h3>
-            <p>We offer free consultations. If you hire a lawyer, you pay nothing up front and nothing unless you win your case.</p>
+            <p>We offer free consultations. If you hire a lawyer, rates and fee structures may differ depending on the attorney and your case. Please discuss fees directly with your attorney.</p>
           </div>
           <div>
             <h3 className="font-bold mb-2">What happens after I fill out the form?</h3>
