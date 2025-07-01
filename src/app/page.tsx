@@ -136,11 +136,6 @@ export default function Home() {
             Get Your Disability Benefits
           </h1>
           
-          {/* Clear Description */}
-          <p className="text-lg text-[#4B5A6A] mb-6 text-center max-w-3xl mx-auto leading-relaxed">
-            If you have a physical or mental condition that prevents you from working, you may be entitled to Social Security Disability (SSDI) or Supplemental Security Income (SSI) benefits. A California disability attorney will contact you about your claim.
-          </p>
-          
           {/* Trust Signals */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 text-sm text-[#4B5A6A] font-medium">
             <div className="flex items-center gap-2">
