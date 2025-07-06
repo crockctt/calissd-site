@@ -31,6 +31,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon-v2.png" type="image/png" />
         <link rel="icon" href="/Calissdlogo.PNG" />
+      </Head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <SpeedInsights />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-PTPLFZNX4D" strategy="afterInteractive" />
         <Script id="google-gtag" strategy="afterInteractive">
           {`
@@ -45,19 +48,14 @@ export default function RootLayout({
         {/* Tally Script */}
         <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
         {/* Microsoft Clarity */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{
-          __html: `
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "s67j4vqdgw");
-          `
-        }} />
-      </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script
+          id="clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "s67j4vqdgw");`
+          }}
+        />
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );
