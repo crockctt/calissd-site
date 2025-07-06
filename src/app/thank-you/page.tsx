@@ -1,8 +1,18 @@
 import Link from "next/link";
+import Script from "next/script";
 
 export default function ThankYou() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#F6F3EE] px-4">
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17240176145/RUz7CM-WlusaEJHs4JxA',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        `}
+      </Script>
       <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl px-8 py-16 flex flex-col items-center animate-fade-in">
         <h1 className="heading-display text-4xl sm:text-5xl font-extrabold text-[#15304B] mb-4 text-center">Thank You!</h1>
         <p className="body-sans text-lg sm:text-xl text-[#15304B] mb-8 text-center max-w-xl">
