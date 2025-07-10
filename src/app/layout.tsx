@@ -20,19 +20,28 @@ export const metadata: Metadata = {
   description: "Get a free consultation with a top Social Security Disability attorney. CaliSSD connects individuals seeking disability benefits with experienced legal representation.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Head>
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KFH4QS6J');
+          `
+        }} />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/favicon-v2.png" type="image/png" />
         <link rel="icon" href="/Calissdlogo.PNG" />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans bg-[#F6F3EE]`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFH4QS6J" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
+        </noscript>
         <SpeedInsights />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-PTPLFZNX4D" strategy="afterInteractive" />
         <Script id="google-gtag" strategy="afterInteractive">
@@ -42,12 +51,9 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-PTPLFZNX4D');
             gtag('config', 'AW-17240176145');
-            console.log('🔧 GA4 Script loaded and configured for G-PTPLFZNX4D');
           `}
         </Script>
-        {/* Tally Script */}
         <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
-        {/* Microsoft Clarity */}
         <Script
           id="clarity"
           strategy="afterInteractive"
