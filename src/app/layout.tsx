@@ -43,16 +43,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFH4QS6J" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
         </noscript>
         <SpeedInsights />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PTPLFZNX4D" strategy="afterInteractive" />
-        <Script id="google-gtag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PTPLFZNX4D');
-            gtag('config', 'AW-17240176145');
-          `}
-        </Script>
         <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
         <Script
           id="clarity"
