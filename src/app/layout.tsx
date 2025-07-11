@@ -38,17 +38,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/Calissdlogo.PNG" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans bg-[#F6F3EE]`}>
+        {/* eslint-disable-next-line react/no-danger */}
+        {/* prettier-ignore */}
         {/* Google Tag Manager (noscript) */}
+        {/* The following HTML comments are for clarity and will not appear in the final HTML, but match Google's snippet */}
+        {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFH4QS6J" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
         </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <SpeedInsights />
         <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
         <Script
           id="clarity"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "s67j4vqdgw");`
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, \"clarity\", \"script\", \"s67j4vqdgw\");`
           }}
         />
         {children}
