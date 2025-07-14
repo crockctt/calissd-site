@@ -33,6 +33,17 @@ export default function FAQPage() {
             `,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTPLFZNX4D"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PTPLFZNX4D');
+            `,
+          }}
+        />
       </Head>
       {/* Google Tag Manager (noscript) */}
       <noscript>
